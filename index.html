@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><img src="./media/15cea60e-52fc-4f06-9853-e8857abb271b.png" alt=""></a>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+
+
+        <nav class="navbar">
+            <a href="#inicio" style="--i:1;">Inicio</a>
+            <a href="#QuienesSomos" style="--i:2;">Quienes Somos</a>
+            <a href="#QueHacemos" style="--i:3;">Que Hacemos</a>
+            <a href="#" style="--i:4;">Valores</a>
+            <a href="#" style="--i:5;">Contacto</a>
+            <a href="#" style="--i:5;"><img src="./media/bandera_argentina.png" alt=""></a>
+        </nav>
+    </header>
+ 
+    <section class="img-section" id="inicio">
+        <div class="img-overlay">
+            <h1>Integral Design</h1>
+            <p>Cuando cambiamos, el mundo cambia.<br>
+            Servimos para transformar.</p>
+            <button>Que Hacemos</button>
+        </div>
+    </section>
+
+
+    <section class="QuienesSomos-section" id="QuienesSomos">
+        <h3 class="QuienesSomos-section-subtitle">Empresa</h3>
+        <h2 class="QuienesSomos-section-title">Desde 1972</h2>
+        <h3 class="QuienesSomos-section-subtitle">Mas de 5 Decadas Dedicados al Comercio</h3>
+
+        <div class="QuienesSomos-envolve">
+            <div class="QuienesSomos-img-container">
+                <img src="media/collage.png" alt="" class="QuienesSomos-img">
+            </div>  
+            <div class="QuienesSomos-text">
+                <p>En INTEGRAL DESIGN,  ofrecemos soluciones de distribución en sectores como el audio, video, multimedia, outdoor y tecnología. <br>
+                    Nuestra red llega desde los grandes centros urbanos hasta los rincones más alejados del territorio, conectando productos con experiencias reales. <br>
+                    Nos mueve la innovación, y la construcción de relaciones sólidas. No sólo distribuimos: desarrollamos marca, cuidamos la experiencia del cliente y potenciamos cada punto de contacto
+                </p>
+                <button>SABER MAS<span class="material-icons">arrow_forward_ios</span></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="NuestraExperiencia-seccion">
+        <div class="NuestraExperiencia-envolve">
+            <div class="NuestraExperiencia-title">
+                <h1>Nuestra experiencia, nuestros cimientos</h1>
+            </div>
+            <div class="NuestraExperiencia-text">
+                <p>Durante años, fuimos parte activa del crecimiento del sector audio, video y tecnología aplicada.
+                    Instalaciones especializadas, participaciones en ferias y representamos marcas en entornos reales, donde los productos se transforman en experiencias.</p>
+            </div>
+            
+            <!-- <div class="NuestraExperiencia-carousel">
+                <div class="NuestraExperiencia-track">
+                    <div class="grupo">
+                        <img src="media/boceto.png" alt="">
+                        <img src="media/boceto.png" alt="">
+                        <img src="media/boceto.png" alt="">
+                        <img src="media/boceto.png" alt="">
+                        <img src="media/boceto.png" alt="">
+                        </div>
+                        <div class="grupo">
+                        <img src="media/boceto.png" alt="">
+                        <img src="media/boceto.png" alt="">
+                        <img src="media/boceto.png" alt="">
+                        <img src="media/boceto.png" alt="">
+                        <img src="media/boceto.png" alt="">
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <section class="stereo-section">
+        <div class="stereo">
+            <div class="half top">
+                <img src="media/ESTEREO/2.png" alt="Parte superior">
+            </div>
+            <div class="half bottom">
+                <img src="media/ESTEREO/1.png" alt="Parte inferior">
+            </div>
+        </div>
+        <div class="stereo-text">
+            <p>“Desde el e-commerce hasta el punto de venta, diseñamos, fabricamos y distribuimos soluciones que se viven, se escuchan y se sienten.”</p>
+        </div>
+    </section>
+
+    <!-- GPT -->
+    <section class="grid-section">
+        <div class="grid-container">
+            <!-- Fila 1 -->
+            <div class="grid-item no-logo">
+                <span class="material-icons">route</span>
+                <span class="span-title">+50 Años</span>
+                <small>de Trayectoria</small>
+            </div>
+            <div class="grid-item no-logo">
+                <span class="material-icons">local_mall</span>
+                <span class="span-title">Ecommerce</span>
+                <small>Propio</small>
+            </div>
+            <div class="grid-item no-logo">
+                <span class="material-icons">edit</span>
+                <span class="span-title">Diseño y Fabricación</span>
+                <small>Colaborativa</small>
+            </div>  
+
+            <!-- Fila 2 -->
+            <!-- <div></div>
+            <div class="grid-item logo">
+                <img src="media/LOG.png" alt="logo">
+            </div>
+            <div></div> -->
+
+            <!-- Fila 3 -->
+            <div class="grid-item no-logo">
+                <span class="material-icons">handshake</span>
+                <span class="span-title">B2B/B2C</span>
+                <small>Orientado</small>
+            </div>
+            <div class="grid-item no-logo">
+                <span class="material-icons">location_on</span>
+                <span class="span-title">Punto de Venta</span>
+                <small>Físico</small>
+            </div>
+            <div class="grid-item no-logo">
+                <span class="material-icons">storefront</span>
+                <span class="span-title">Marketplace</span>
+                <small>Since 2005</small>
+            </div>
+        </div>
+    </section>
+
+    <section class="QueHacemos-section" id="QueHacemos">
+        <div class="QueHacemos-title">
+            <h3 class="QuienesSomos-section-subtitle">Tres divisiones, una vision compartida</h3>
+            <h2 class="QuienesSomos-section-title">Que Hacemos</h2>
+        </div>
+
+        <div class="QueHacemos-envolve">
+            <div class="QueHacemos-card">
+                <div>
+                    <img src="media/Que_hacemos/acampe1.jpg" alt="">
+                    <div class="QueHacemos-text">
+                        <h4 class="QueHacemos-h4">ID Field</h4>
+                        <h5 class="QueHacemos-h5">Outdoor | Fabricación</h5>
+                        <p>Fabricamos desde el territorio. <br>Pensamos en movimiento.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="QueHacemos-card">
+                <div>
+                    <img src="media/Que_hacemos/fusion.jpg" alt="">
+                    <div class="QueHacemos-text">
+                        <h4 class="QueHacemos-h4">ID Tech</h4>
+                        <h5 class="QueHacemos-h5">Electrónica | Audio | Video</h5>
+                        <p>Diseñamos, seleccionamos y ofrecemos tecnología de alto rendimiento </p>
+                    </div>
+                </div>
+            </div>
+            <div class="QueHacemos-card">
+                <div>
+                    <img src="media/Que_hacemos/contenedores.png" alt="">
+                    <div class="QueHacemos-text">
+                        <h4 class="QueHacemos-h4">ID Trade</h4>
+                        <h5 class="QueHacemos-h5">Distribución | Importación</h5>
+                        <p>Importamos, distribuimos y construimos lazos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="ImgContenedor">
+        <img src="media/happy.png" alt="">
+    </div>
+    <section class="NuestrasMarcas-section">
+        <div class="NuestrasMarcas-title">
+            <h2 class="QuienesSomos-section-title">Nuestras Marcas</h2>
+        </div>
+        <div class="marcas-container">
+            <div class="marca"><img src="media/Marcas-Fondo/ALpine.png" alt="Marca 1"></div>
+            <div class="marca"><img src="media/Marcas-Fondo/Audiopipe.png" alt="Audiopipe"></div>
+            <div class="marca"><img src="media/Marcas-Fondo/Clarion.png" alt="Integral Audio"></div>
+            <div class="marca"><img src="media/Marcas-Fondo/Fusion.png" alt="Integral Design"></div>
+            <div class="marca"><img src="media/Marcas-Fondo/Garmin.png" alt="Garmin"></div>
+            <div class="marca"><img src="media/Marcas-Fondo/Intall Solutions.png" alt=""></div>
+            <div class="marca"><img src="media/Marcas-Fondo/Integral Audio (2).png" alt=""></div>
+            <div class="marca"><img src="media/Marcas-Fondo/Integral Audio.png" alt=""></div>
+            <div class="marca"><img src="media/Marcas-Fondo/JL Audio.png" alt=""></div>
+            <div class="marca"><img src="media/Marcas-Fondo/Nippon America.png" alt=""></div>
+        </div>
+    </section>
+
+    <section class="img-section-2">
+        <div class="img-overlay-2">
+            <p>Trabajamos con marcas que comparten nuestra visión:
+                crecer de forma sostenible, con innovación, excelencia operativa y foco en el cliente.
+                <br><strong>Co-creemos juntos</strong></p>
+            <button>CONTACTANOS</button>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-bottom">
+            <p class="text-footer-bottom">© 2025 INTEGRAL DESIGN. Todos los derechos reservados. <span>Alvear 766, San Fernando, CP 1645, Buenos Aires</span></p>
+        </div>
+    </footer>
+
+    
+
+    <script>
+        const scrollers = document.querySelectorAll(".scroller");
+
+        // If a user hasn't opted in for recuded motion, then we add the animation
+        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        addAnimation();
+        }
+
+        function addAnimation() {
+        scrollers.forEach((scroller) => {
+            // add data-animated="true" to every `.scroller` on the page
+            scroller.setAttribute("data-animated", true);
+
+            // Make an array from the elements within `.scroller-inner`
+            const scrollerInner = scroller.querySelector(".scroller__inner");
+            const scrollerContent = Array.from(scrollerInner.children);
+
+            // For each item in the array, clone it
+            // add aria-hidden to it
+            // add it into the `.scroller-inner`
+            scrollerContent.forEach((item) => {
+            const duplicatedItem = item.cloneNode(true);
+            duplicatedItem.setAttribute("aria-hidden", true);
+            scrollerInner.appendChild(duplicatedItem);
+            });
+        });
+        }
+
+        // Seleccionamos todos los enlaces dentro del menú
+        const navLinks = document.querySelectorAll('.navbar a');
+        const menuCheckbox = document.getElementById('check');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+            // Solo desmarcamos si el menú está abierto
+            if(menuCheckbox.checked){
+                menuCheckbox.checked = false;
+            }
+            });
+        });
+
+    </script>
+</body>
+</html>

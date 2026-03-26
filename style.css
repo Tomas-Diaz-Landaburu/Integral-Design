@@ -1,0 +1,888 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    /* font-family: 'Inter', 'Poppins', sans-serif;     */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 100px; /* ajusta según la altura de tu header */
+}
+
+/* TEXTO */
+.QuienesSomos-section-title{
+    font-size: 60px;
+    color: black;
+    font-weight: 700;
+    margin: 0;
+    color: black;
+}
+
+.NuestraExperiencia-title h1{
+    font-size: 50px;   /* más grande y destacado */
+    font-weight: 700;
+    text-align: center;
+}
+
+/* HEADER */
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 1.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(50px);
+    z-index: -1;
+}
+
+.logo img{
+    width: 12.5rem;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+}
+
+.navbar a{
+    font-size: 1.4rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    margin-left: 5rem;
+    
+} 
+
+/* efecto hover */
+.navbar a:not(:has(img)) {
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar a:not(:has(img))::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar a:not(:has(img)):hover::after {
+    width: 100%;
+}
+
+.navbar a img{
+    width: 5rem;
+    border-radius: 0.6rem;
+    position: relative;
+    top: 5px;
+}
+
+#check{
+    display: none;
+}
+
+.icons{
+    position: absolute;
+    right: 10%;
+    font-size: 2.8rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/* IMG INTRO */
+.img-section {
+    width: 100%;
+    height: 100vh; 
+    background-image: url("media/intro.webp");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;  
+    padding-left: 50px;    
+}
+
+.img-overlay {
+    color: white;
+    max-width: 600px;
+}
+
+.img-overlay h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: 100;
+}
+
+.img-overlay p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.img-overlay button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    opacity: 0.8;
+}
+.img-overlay button:hover {
+    background: rgba(216, 216, 216, 0.8);
+    transition: 0.2s;
+}
+
+/* QUIENES SOMOS DESDE 1972*/
+.QuienesSomos-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    padding: 30px 0 10px 0;  /* arriba 30px, abajo 10px */
+    text-align: center;    
+}
+
+.QuienesSomos-section{
+    background: url("media/ondas.png") no-repeat center center;
+    background-size: cover;   /* cubre el 100% */
+    background-attachment: fixed; /* efecto parallax (opcional) */
+}
+
+.QuienesSomos-envolve{
+    display: flex;
+    align-items: center;                 
+    width: 80%;
+}
+
+.QuienesSomos-section-subtitle {
+    font-size: 18px;   /* más chico que el h2 */
+    font-weight: 400;  /* más liviano */
+    margin: 0;         /* eliminamos espacios extras */
+    text-align: center;
+    letter-spacing: 2px; /* opcional, estilo elegante */
+    font-weight: 200;
+}
+
+.QuienesSomos-section-title {
+    font-size: 50px;   /* más grande y destacado */
+    font-weight: 700;
+    text-align: center;
+}
+
+.QuienesSomos-img-container{
+    width: 100%;
+}
+
+.QuienesSomos-img-container img{
+    height: auto;
+    width: 45rem;
+}
+
+.QuienesSomos-text{
+    width: 100%;
+    
+}
+
+.QuienesSomos-text p{
+    color: black;
+    line-height: 28px;
+    width: 60%;
+    margin: 0 auto;
+
+}
+
+.QuienesSomos-text button {
+    margin-top: 20px;
+
+    background-color: #0056b3;
+    border: none;
+    font-size: 16px;
+    padding: 12px 25px;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+
+    align-items: center;
+}
+
+.QuienesSomos-text button:hover {
+    background-color: #003f80;
+}
+
+.QuienesSomos-text button span {
+    font-size: 20px;
+    line-height: 1;       
+    vertical-align: middle; 
+    position: relative;
+    top: 3px;           
+    left: 5px;   
+    color: white;
+}
+
+/* NUESTRA EXPERIENCIA */
+.NuestraExperiencia-seccion{
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.NuestraExperiencia-envolve{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+
+.NuestraExperiencia-text p{
+    color: grey;
+    line-height: 28px;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.NuestraExperiencia-images{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* ESTEREO */
+.stereo-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;     /* centrar horizontal */
+  align-items: center;         /* centrar vertical */
+}
+
+.stereo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30rem;         /* ajustá el ancho */
+  overflow: hidden;
+}
+
+.half {
+  width: 100%;
+  height: 15rem;        /* alto fijo para la mitad (ajustalo al tamaño real) */
+  overflow: hidden;
+  position: relative;
+}
+
+.half img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Mostrar solo la parte superior */
+.half.top img {
+  top: 0;
+}
+
+/* Mostrar solo la parte inferior */
+.bottom img {
+    top: -15rem;   /* desplaza la imagen hacia arriba la mitad de su altura */
+}
+
+.stereo-text{
+    font-size: 20px;
+}
+
+/* GRID */
+
+
+.grid-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+/* ===== GRID ===== */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 70px; /* MÁS ESPACIO ENTRE ITEMS */
+    max-width: 1200px;
+}
+
+/* ===== CARD ===== */
+/* ===== CARD GENERAL ===== */
+.grid-item {
+    background: #fff;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 30px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.4s ease;
+    animation: fadeUp 0.3s ease forwards;
+    opacity: 0;
+    transform: translateY(50px);
+    cursor: pointer;
+}
+
+/* Animación de entrada */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== ICONOS ===== */
+.material-icons {
+    font-size: 50px;
+    color: #0d6efd;
+    font-variation-settings: 'FILL' 1, 'wght' 700, 'opsz' 48;
+    margin-bottom: 10px;
+    transition: 0.5s ease; /* Transición corregida */
+}
+
+/* Hover SOLO para íconos */
+.grid-item:hover .material-icons {
+    transform: scale(1.3) rotate(2deg);
+}
+
+/* ===== TEXTO ===== */
+.span-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0d6efd;
+    margin-bottom: 8px;
+}
+
+.grid-item small {
+    font-size: 1rem;
+    color: #555;
+}
+
+.grid-item img {
+    width: 65px;
+    height: 65px;
+    margin-bottom: 20px;
+    transition: 2s ease;
+}
+
+/* QUE HACEMOS */
+.QueHacemos-section{
+    background: url("media/Que_hacemos/ondas.png") no-repeat center center;
+    background-size: cover;   /* cubre el 100% */
+    background-attachment: fixed; /* efecto parallax (opcional) */
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.QuienesSomos-envolve, .QueHacemos-envolve{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.QueHacemos-card{
+    background-color: rgb(255, 255, 255);
+    min-height: 50vh;
+    width: 400px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2); /* sombra hacia abajo */
+    transition: transform 0.5s ease;
+    margin: 50px 0 50px 0;
+}
+
+.QueHacemos-card:hover{
+    transform: scale(1.05); /* se agranda un 10% */
+    cursor: pointer;
+}
+
+.QueHacemos-card img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center bottom;
+    margin-bottom: 20px;
+}
+
+.QueHacemos-text{
+    text-align: center;
+    flex: 1;                   /* ocupa el espacio restante */
+    display: flex;
+    flex-direction: column;    /* apila títulos y párrafos */
+    justify-content: center;   /* centra verticalmente */
+    align-items: center;       /* centra horizontalmente */
+    text-align: center;
+    padding: 20px; 
+}
+
+.QueHacemos-h4{
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.QueHacemos-h5{
+    font-size: 25px;
+    font-weight: 400;
+    margin: 1rem 0;
+}
+
+/* IMAGEN */
+.ImgContenedor{
+    width: 100%;
+}
+
+.ImgContenedor img{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+
+.img-section-2 {
+    width: 100%;
+    height: 400px; /* ajustá según quieras */
+    background-image: url("media/carpa.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    text-align: center;
+}
+
+.img-overlay-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; 
+    max-width: 700px;
+}
+
+.img-overlay-2 p {
+    padding: 15px 25px;
+    font-size: 16px;
+    border-radius: 40px;
+    background: rgba(0, 0, 0, 0.5); 
+    color: white;
+    line-height: 1.5;
+}
+
+.img-overlay-2 strong {
+    font-weight: bold;
+}
+
+.img-overlay-2 button {
+    padding: 10px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.img-overlay-2 button:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* NUESTRAS MARCAS */
+
+.marcas-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.NuestrasMarcas-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+}
+
+.NuestrasMarcas-title h2{
+    font-weight: normal;
+    border-bottom: 2px solid #ccc;
+    display: inline-block; /* para que la línea no ocupe todo el ancho */
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.marca img {
+    max-width: 100%;
+    max-height: 100px;
+    object-fit: contain;
+    filter: grayscale(100%); /* opcional: blanco y negro */
+    transition: 0.3s;
+}
+
+.marca img:hover{
+    filter: grayscale(0);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+    .marcas-container {
+    grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .marcas-container {
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+
+/* ===== FOOTER ===== */
+
+.derechos-reservados {
+    background-color: #000;       
+    display: flex;
+    justify-content: space-between; /* uno a la izquierda y otro a la derecha */
+    align-items: center;           
+    padding: 10px 0;              /* solo arriba/abajo */
+    font-size: 14px;
+    border-top: 1px solid #333;   
+    width: 100%;
+}
+
+.derechos-reservados p {
+    color: #bbb;                  
+    margin: 0;
+}
+
+.derechos-reservados p:first-child {
+    color: #fff;                  
+    font-weight: 500;
+}
+
+.footer-bottom {
+  background: #000;
+  width: 100%;
+  height: 60px;
+  padding: 20px 0;
+  text-align: center;
+  margin-bottom: -100px; }
+
+.text-footer-bottom {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  margin-top: auto;
+  margin-bottom: auto;
+  color: white;
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize; }
+
+@media (max-width: 1300px){
+    .logo img{
+        width: 13rem;
+    }
+    .navbar a img{
+        position: relative;
+        width: 4rem;
+    }
+    .navbar a{
+        font-size: 1.3rem;
+        margin-left: 2.6rem;
+    }
+
+    .header{
+        padding: 1.3rem 2%;
+    }
+
+    /* QUIENES SOMOS */
+    .QuienesSomos-text p{
+        width: 100%;
+    }
+
+    .QuienesSomos-img-container img{
+    width: 30rem;
+}
+}
+
+@media (max-width: 900px){
+
+    .header{
+        padding: 1.3rem 10%;
+    }
+
+    .icons{
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    .icons #close-icon{
+        display: none;
+    }
+
+    .logo img{
+        width: 10rem;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background-color: red;
+        background: rgba(0, 0, 0, .1);
+        backdrop-filter: blur(50px);
+        box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, .1);
+        overflow: hidden;
+        transition: .3s ease;
+
+        flex-direction: column;
+        justify-content: flex-start; /* pega los elementos al inicio */
+    }
+
+    #check:checked~.navbar {
+        height: 25rem;
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(-50px);
+        transition: .3s ease;
+    }
+
+    .navbar a::after {
+        display: none;
+    }
+
+    .navbar a img{
+        display: none;
+    }
+
+    #check:checked~.navbar a{
+        transform: translateY(0);        
+        opacity: 1;
+        transition-delay: calc(.15s * var(--i));
+    }
+
+    /* QUIENES SOMOS */
+    .QuienesSomos-envolve{
+        flex-direction: column;
+    }
+    
+    .QuienesSomos-img-container img{
+        width: 95%;
+    }
+
+    .QuienesSomos-text p{
+        width: 99%;
+    }
+
+    /* NUESTRA EXPERIENCIA */
+    .NuestraExperiencia-title h1{
+        font-size: 2rem;
+    }
+
+
+    .NuestraExperiencia-text p{
+        width: 100%;
+        font-size: 0.8rem;
+    }
+
+    /* CARRUSEL */
+    .grupo img{
+        width: 8rem;
+    }
+
+    /* FOTO ESTEREO */
+    .stereo {
+        width: 20rem;         /* ajustá el ancho */
+    }
+
+    .half {
+        height: 10rem;        /* alto fijo para la mitad (ajustalo al tamaño real) */
+    }
+
+    .bottom img {
+        top: -10rem;   /* desplaza la imagen hacia arriba la mitad de su altura */
+    }
+
+    .stereo-text{
+        width: 99%;
+        text-align: center;
+    }
+
+    .stereo-text p{
+        font-weight: 200;
+    }
+
+    /* QUE HACEMOS */
+    .QueHacemos-envolve{
+        flex-direction: column;
+    }
+
+    .QueHacemos-card{
+        width: 90%;
+        margin: 1.5rem 0;
+    }
+
+    .ImgContenedor img{
+        width: 40rem;
+        transform: translateX(-20%);
+        object-fit: cover;
+    }
+}
+
+
+
+
+@media (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+
+
+
+
+
+
+
+

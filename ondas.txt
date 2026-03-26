@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fondo de ondas cool</title>
+  <style>
+    :root {
+      --stroke: rgba(0, 0, 0, .22); 
+      --bg: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: var(--bg);
+      overflow: hidden;
+    }
+    .stage {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+      shape-rendering: geometricPrecision;
+    }
+    .wave {
+      fill: none;
+      stroke: var(--stroke);
+      stroke-width: 1;
+      vector-effect: non-scaling-stroke;
+      will-change: d;
+      transition: stroke 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <div class="stage" id="stage" aria-hidden="true">
+    <svg id="svg" preserveAspectRatio="none"></svg>
+  </div>
+
+<script>
+(() => {
+  const svg   = document.getElementById('svg');
+  const stage = document.getElementById('stage');
+
+  const LINES        = 12;
+  const POINTS       = 160;
+  const BASE_AMPL    = 40;
+  const GAP          = 7.5;
+  const BASELINE_F   = 0.55;
+  const PHASE_SPEED  = 0.002;
+  const DRIFT_SPEED  = 0.0004;
+
+  let w = 0, h = 0, cy = 0;
+  let phase = 0;
+  let drift = 0;
+
+  let targetMouseX = 0.5, targetMouseY = 0.5;
+  let mouseX = 0.5, mouseY = 0.5;
+  let mouseVX = 0, mouseVY = 0; // velocidad del mouse
+  let mouseEnergy = 0;
+
+  const paths = [];
+  for (let i=0; i<LINES; i++) {
+    const p = document.createElementNS('http://www.w3.org/2000/svg','path');
+    p.setAttribute('class', 'wave');
+    const t = i/(LINES-1);
+    const alpha = 0.10 + 0.12 * (1 - Math.abs(0.5 - t)*2);
+    p.style.stroke = `rgba(0,0,0,${alpha.toFixed(2)})`;
+    svg.appendChild(p);
+    paths.push(p);
+  }
+
+  function resize() {
+    const rect = stage.getBoundingClientRect();
+    w = rect.width;
+    h = rect.height;
+    cy = h * BASELINE_F;
+    svg.setAttribute('viewBox', `0 0 ${w} ${h}`);
+  }
+  resize();
+  addEventListener('resize', resize);
+
+  function onPointerMove(e) {
+    const rect = stage.getBoundingClientRect();
+    const px = (e.clientX - rect.left) / rect.width;
+    const py = (e.clientY - rect.top) / rect.height;
+
+    // calcular velocidad
+    mouseVX = px - targetMouseX;
+    mouseVY = py - targetMouseY;
+
+    targetMouseX = px;
+    targetMouseY = py;
+
+    // energía proporcional a la velocidad
+    const speed = Math.sqrt(mouseVX**2 + mouseVY**2);
+    mouseEnergy = Math.min(1, mouseEnergy + speed * 5);
+  }
+
+  stage.addEventListener('mousemove', onPointerMove);
+  stage.addEventListener('touchmove', e => {
+    if (e.touches.length > 0) {
+      onPointerMove({ clientX: e.touches[0].clientX, clientY: e.touches[0].clientY });
+    }
+  }, { passive: true });
+
+  function bellAt(x01){
+    const s = Math.sin(Math.PI * x01);
+    return s*s;
+  }
+
+  function buildPath(i){
+    const pts = [];
+    const baseY = cy + (i - (LINES-1)/2) * GAP + Math.sin(drift + i*0.25) * 1.5;
+    const ampl = BASE_AMPL * (0.8 + 0.3*Math.cos(i*0.4 + drift));
+    const linePhase = phase * (1 + i*0.05) + i*0.3;
+
+    for (let k=0; k<POINTS; k++) {
+      const x01 = k/(POINTS-1);
+      const x = x01 * w;
+
+      const wave = Math.sin((x01*2 + linePhase) * Math.PI*0.8);
+      const envelope = bellAt(x01);
+
+      const dx = (x01 - mouseX);
+      const dy = (i/LINES - mouseY);
+      const dist = Math.sqrt(dx*dx + dy*dy);
+
+      // onda expansiva más suave y realista
+      const explosion = Math.exp(-dist*6) * mouseEnergy * 100;
+
+      const y = baseY + wave * ampl * envelope + explosion * envelope;
+      pts.push([x, y]);
+    }
+
+    let d = '';
+    for (let j=0; j<pts.length; j++) {
+      const [x, y] = pts[j];
+      if (j === 0) {
+        d += `M ${x.toFixed(2)} ${y.toFixed(2)} `;
+      } else {
+        const [x0, y0] = pts[j-1];
+        const [xm1, ym1] = j>1 ? pts[j-2] : pts[j-1];
+        const [xp1, yp1] = j<pts.length-1 ? pts[j+1] : pts[j];
+        const c1x = x0 + (x - xm1)/6;
+        const c1y = y0 + (y - ym1)/6;
+        const c2x = x - (xp1 - x0)/6;
+        const c2y = y - (yp1 - y0)/6;
+        d += `C ${c1x.toFixed(2)} ${c1y.toFixed(2)}, ${c2x.toFixed(2)} ${c2y.toFixed(2)}, ${x.toFixed(2)} ${y.toFixed(2)} `;
+      }
+    }
+    return d;
+  }
+
+  let last = performance.now();
+  function tick(now){
+    const dt = Math.min(60, now - last);
+    last = now;
+
+    // suavizado con inercia
+    mouseX += (targetMouseX - mouseX) * 0.1;
+    mouseY += (targetMouseY - mouseY) * 0.1;
+
+    // disipación más lenta para sensación de elasticidad
+    mouseEnergy *= 0.94;
+
+    phase += PHASE_SPEED * dt * 0.06;
+    drift += DRIFT_SPEED * dt * 0.06;
+
+    for (let i=0; i<LINES; i++) {
+      paths[i].setAttribute('d', buildPath(i));
+    }
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+})();
+</script>
+
+</body>
+</html>
