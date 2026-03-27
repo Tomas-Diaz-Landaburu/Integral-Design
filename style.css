@@ -302,7 +302,7 @@ section {
 
 .half {
   width: 100%;
-  height: 15rem;        /* alto fijo para la mitad (ajustalo al tamaño real) */
+  height: 14.45rem;        /* alto fijo para la mitad (ajustalo al tamaño real) */
   overflow: hidden;
   position: relative;
 }
@@ -332,8 +332,6 @@ section {
 }
 
 /* GRID */
-
-
 .grid-section {
     display: flex;
     justify-content: center;
