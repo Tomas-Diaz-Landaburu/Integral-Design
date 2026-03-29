@@ -235,11 +235,10 @@ section {
     color: black;
     line-height: 28px;
     width: 60%;
-    margin: 0 auto;
-
+    margin: 0 auto 30px;
 }
 
-.QuienesSomos-text button {
+.btn-saber-mas {
     margin-top: 20px;
 
     background-color: #0056b3;
@@ -251,13 +250,14 @@ section {
     cursor: pointer;
 
     align-items: center;
+    text-decoration: none;
 }
 
-.QuienesSomos-text button:hover {
+.btn-saber-mas:hover {
     background-color: #003f80;
 }
 
-.QuienesSomos-text button span {
+.QuienesSomos-text a span {
     font-size: 20px;
     line-height: 1;       
     vertical-align: middle; 
