@@ -142,6 +142,10 @@ section {
     margin-bottom: 20px;
 }
 
+.btn-link {
+    text-decoration: none;
+}
+
 .img-overlay button {
     width: 200px;
     height: 50px;
@@ -158,6 +162,11 @@ section {
     align-items: center;
     justify-content: center;
 }
+
+.img-overlay a{
+    text-decoration: none;
+}
+
 .img-overlay button:hover {
     background: rgba(216, 216, 216, 0.8);
     transition: 0.2s;
@@ -171,6 +180,7 @@ section {
     width: 30px;
     height: 30px;
 }
+
 /* QUIENES SOMOS DESDE 1972*/
 .QuienesSomos-section{
     display: flex;
