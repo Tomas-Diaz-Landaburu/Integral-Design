@@ -532,14 +532,14 @@ section {
     width: 100%;
 }
 
-/* ---------------------------------------------------------------------------------------------------------------------------------------- */
-
 .img-section-2 {
     width: 100%;
-    height: 400px; /* ajustá según quieras */
-    background-image: url("media/carpa.png");
-    background-size: cover;
-    background-position: center;
+    height: 550px; /* ajustá según quieras */
+    background-image: url("media/cfmoto.jpg");
+    /* background-size: cover; */
+    /* background-position: top; */
+    background-position: center 30%;  /* mueve hacia arriba */
+    /* background-position: center 0%;   tope absoluto */
     position: relative;
     display: flex;
     justify-content: center; 
@@ -867,12 +867,3 @@ section {
         gap: 40px;
     }
 }
-
-
-
-
-
-
-
-
-
