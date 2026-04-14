@@ -937,3 +937,33 @@ section {
         gap: 40px;
     }
 }
+
+
+
+
+
+/* Animacion  */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.img-overlay h1 {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.img-overlay p {
+  animation: fadeInUp 0.8s ease 0.3s forwards; /* 0.3s de delay */
+  opacity: 0; /* empieza invisible hasta que arranca la animación */
+}
+
+.img-overlay button {
+  animation: fadeInUp 0.8s ease 0.6s forwards; /* 0.6s de delay */
+  opacity: 0;
+}
