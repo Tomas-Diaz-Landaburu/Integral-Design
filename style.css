@@ -588,9 +588,9 @@ section {
 .marcas-container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 20px;
+    gap: 60px;
     padding: 20px;
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
@@ -616,7 +616,7 @@ section {
 
 .marca img {
     max-width: 100%;
-    max-height: 100px;
+    max-height: 110px;
     object-fit: contain;
     filter: grayscale(100%); /* opcional: blanco y negro */
     transition: 0.3s;
