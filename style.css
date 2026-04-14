@@ -532,84 +532,6 @@ section {
     width: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 
 .img-section-2 {
@@ -665,7 +587,7 @@ section {
 
 .marcas-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 20px;
     padding: 20px;
     max-width: 1200px;
