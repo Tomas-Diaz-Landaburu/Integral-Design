@@ -210,7 +210,7 @@
     <footer class="site-footer">
     <div class="footer-container">
         <div class="footer-logo">
-            <img src="media/15cea60e-52fc-4f06-9853-e8857abb271b.png" alt="">
+            <img src="media/Intregral_sinfondo.svg" alt="">
         </div>
 
         <div class="footer-links">
@@ -226,7 +226,6 @@
         <h3 class="footer-heading">Co-Creemos Juntos</h3>
         <a href="mailto:adl@integraldesign.com.ar?subject=Consulta&body=" class="contact-btn">CONTACTANOS</a>
         </div>
-        
     </div>
 
     <div class="footer-bottom">
@@ -234,98 +233,6 @@
         <p>Alvear 766, San Fernando CP: 1645, Buenos Aires</p>
     </div>
     </footer>
-
-    <script>
-        const scrollers = document.querySelectorAll(".scroller");
-
-        // If a user hasn't opted in for recuded motion, then we add the animation
-        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        addAnimation();
-        }
-
-        function addAnimation() {
-        scrollers.forEach((scroller) => {
-            // add data-animated="true" to every `.scroller` on the page
-            scroller.setAttribute("data-animated", true);
-
-            // Make an array from the elements within `.scroller-inner`
-            const scrollerInner = scroller.querySelector(".scroller__inner");
-            const scrollerContent = Array.from(scrollerInner.children);
-
-            // For each item in the array, clone it
-            // add aria-hidden to it
-            // add it into the `.scroller-inner`
-            scrollerContent.forEach((item) => {
-            const duplicatedItem = item.cloneNode(true);
-            duplicatedItem.setAttribute("aria-hidden", true);
-            scrollerInner.appendChild(duplicatedItem);
-            });
-        });
-        }
-
-        // Seleccionamos todos los enlaces dentro del menú
-        const navLinks = document.querySelectorAll('.navbar a');
-        const menuCheckbox = document.getElementById('check');
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-            // Solo desmarcamos si el menú está abierto
-            if(menuCheckbox.checked){
-                menuCheckbox.checked = false;
-            }
-            });
-        });
-
-        // CARRUSEL
-        const images = [
-        { src: "media/x_boceto.jpg", label: "Imagen 1" },
-        { src: "media/x_boceto.jpg", label: "Imagen 1" },
-        { src: "media/x_boceto.jpg", label: "Imagen 1" },
-        { src: "media/x_boceto.jpg", label: "Imagen 1" },
-        { src: "media/x_boceto.jpg", label: "Imagen 1" },
-        { src: "media/x_boceto.jpg", label: "Imagen 1" },
-        { src: "media/x_boceto.jpg", label: "Imagen 1" },
-        { src: "media/x_boceto.jpg", label: "Imagen 1" },
-        { src: "media/x_boceto.jpg", label: "Imagen 1" },
-        { src: "media/x_boceto.jpg", label: "Imagen 1" },
-        ];
-
-        const track = document.getElementById("track");
-
-        function crearItem(item) {
-        const div = document.createElement("div");
-        div.className = "carousel-item";
-        const img = document.createElement("img");
-        img.src = item.src;
-        img.alt = item.label;
-        div.appendChild(img);
-        return div;
-        }
-
-        // Originales
-        images.forEach(item => track.appendChild(crearItem(item)));
-        // Clones exactos para el loop
-        images.forEach(item => track.appendChild(crearItem(item)));
-
-        // Calcular el ancho exacto del bloque original y setear la animación
-        window.addEventListener("load", () => {
-        const items = track.querySelectorAll(".carousel-item");
-        const totalItems = images.length;
-        const itemWidth = 300 + 16; // width + gap
-        const totalWidth = totalItems * itemWidth;
-
-        const style = document.createElement("style");
-        style.textContent = `
-            @keyframes scroll-left {
-            0%   { transform: translateX(0px); }
-            100% { transform: translateX(-${totalWidth}px); }
-            }
-        `;
-        document.head.appendChild(style);
-
-        track.addEventListener("mouseenter", () => track.style.animationPlayState = "paused");
-        track.addEventListener("mouseleave", () => track.style.animationPlayState = "running");
-        });
-    </script>
+    <script src="js/carousel.js" defer></script>
 </body>
 </html>

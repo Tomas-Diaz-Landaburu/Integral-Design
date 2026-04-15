@@ -361,7 +361,7 @@ section {
 
 .carousel-item {
     width: 300px;
-    height: 400px;
+    height: 380px;
     flex-shrink: 0;
     border-radius: 12px;
     overflow: hidden;
@@ -371,6 +371,8 @@ section {
     cursor: pointer;
     position: relative;
     z-index: 1;
+
+    cursor: grab;
 }
 
 .carousel-item:hover {
@@ -671,8 +673,7 @@ section {
     width: 70%;
 }
 
-
-  /* Columna 2: Links */
+/* Columna 2: Links */
 .footer-links {
     flex: 1;
     min-width: 200px;
