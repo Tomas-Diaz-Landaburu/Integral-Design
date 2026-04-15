@@ -335,7 +335,7 @@ section {
 .carousel-item:hover {
     position: relative;
     transform: scale(1.15);
-    margin: 0 18px;  /* empuja a las imágenes vecinas */
+    margin: 0 18px;  /* empuja a las imágenes vecinas */ 
     z-index: 10;
 }
 
