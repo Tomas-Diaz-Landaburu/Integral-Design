@@ -272,27 +272,81 @@ section {
     padding: 1rem 0;
     display: flex;
     justify-content: center;
+    min-height: 80vh;
 }
 
 .NuestraExperiencia-envolve{
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 90%;
 }
-
 
 .NuestraExperiencia-text p{
     color: grey;
     line-height: 28px;
     width: 60%;
-    margin: 0 auto;
+    margin: 0 auto 4rem;
     text-align: center;
+}
+
+#nuestraExperienciaH1 {
+    margin-top: 4rem;
 }
 
 .NuestraExperiencia-images{
     display: flex;
     justify-content: space-around;
 }
+
+/* CARRUSEL */
+.carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 16px;
+    width: max-content;
+    animation: scroll-left 40s linear infinite;
+}
+
+.carousel-track:hover {
+    animation-play-state: paused;
+}
+
+.carousel-item {
+    width: 550px;
+    height: 450px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+
+    transition: transform 0.3s ease, margin 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+
+    cursor: grab;
+}
+
+.carousel-item:hover {
+    position: relative;
+    transform: scale(1.15);
+    margin: 0 18px;  /* empuja a las imágenes vecinas */
+    z-index: 10;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
 
 /* ESTEREO */
 .stereo-section {
@@ -341,53 +395,6 @@ section {
     font-size: 20px;
 }
 
-/* CARRUSEL */
-.carousel-wrapper {
-  overflow: hidden;
-  width: 100%;
-  padding: 2rem 0;
-}
-
-.carousel-track {
-  display: flex;
-  gap: 16px;
-  width: max-content;
-  animation: scroll-left 40s linear infinite;
-}
-
-.carousel-track:hover {
-  animation-play-state: paused;
-}
-
-.carousel-item {
-    width: 550px;
-    height: 450px;
-    flex-shrink: 0;
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid #e0e0e0;
-
-    transition: transform 0.3s ease, margin 0.3s ease;
-    cursor: pointer;
-    position: relative;
-    z-index: 1;
-
-    cursor: grab;
-}
-
-.carousel-item:hover {
-  position: relative;
-  transform: scale(1.15);
-  margin: 0 18px;  /* empuja a las imágenes vecinas */
-  z-index: 10;
-}
-
-.carousel-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
 /* GRID */
 .grid-section {
     display: flex;
