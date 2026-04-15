@@ -1,14 +1,16 @@
 const images = [
-{ src: "media/numeros/1.jpeg", label: "Imagen 1" },
-{ src: "media/numeros/2.png", label: "Imagen 2" },
-{ src: "media/numeros/3.png", label: "Imagen 3" },
-{ src: "media/numeros/4.png", label: "Imagen 4" },
-{ src: "media/numeros/5.png", label: "Imagen 5" },
-{ src: "media/numeros/6.png", label: "Imagen 6" },
-{ src: "media/numeros/7.png", label: "Imagen 7" },
-{ src: "media/numeros/8.png", label: "Imagen 8" },
-{ src: "media/numeros/9.png", label: "Imagen 9" },
-{ src: "media/numeros/10.png", label: "Imagen 10" },
+{ src: "media/fotos_carrusel/barco.jpg", label: "Imagen 1" },
+{ src: "media/fotos_carrusel/estand.jpg", label: "Imagen 2" },
+{ src: "media/fotos_carrusel/estand2.jpg", label: "Imagen 3" },
+{ src: "media/fotos_carrusel/IMG_5597.jpeg", label: "Imagen 4" },
+{ src: "media/fotos_carrusel/tablero.jpeg", label: "Imagen 5" },
+{ src: "media/fotos_carrusel/lancha1.jpg", label: "Imagen 6" },
+{ src: "media/fotos_carrusel/lancha2.jpg", label: "Imagen 7" },
+// { src: "media/fotos_carrusel/lancha3.HEIC", label: "Imagen 8" },
+// { src: "media/fotos_carrusel/lancha4.HEIC", label: "Imagen 9" },
+{ src: "media/fotos_carrusel/moto1.jpg", label: "Imagen 10" },
+// { src: "media/fotos_carrusel/moto2.JPG,", label: "Imagen 11" },
+// { src: "media/fotos_carrusel/moto3.jpeg,", label: "Imagen 12" },
 ];
 
 const track = document.getElementById("track");
@@ -28,7 +30,7 @@ images.forEach(item => track.appendChild(crearItem(item)));
 
 window.addEventListener("load", () => {
     const totalItems = images.length;
-    const itemWidth = 300 + 16;
+    const itemWidth = 550 + 16;
     const totalWidth = totalItems * itemWidth;
 
     const style = document.createElement("style");
