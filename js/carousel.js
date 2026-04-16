@@ -31,7 +31,7 @@ images.forEach(item => track.appendChild(crearItem(item)));
 
 window.addEventListener("load", () => {
     const totalItems = images.length;
-    const itemWidth = 550 + 16;
+    const itemWidth = 450 + 16;
     const totalWidth = totalItems * itemWidth;
 
     const style = document.createElement("style");
