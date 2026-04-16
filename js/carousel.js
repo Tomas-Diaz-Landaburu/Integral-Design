@@ -116,13 +116,14 @@ window.addEventListener("scroll", () => {
   const rect = stereoSection.getBoundingClientRect();
   const sectionHeight = stereoSection.offsetHeight - window.innerHeight;
 
-  // cuánto scrolleaste dentro de la sección (0 a 1)
   const scrolled = -rect.top / sectionHeight;
   const clamped = Math.min(1, Math.max(0, scrolled));
 
-  // la animación empieza cuando llegás al 40% del scroll de la sección
-  const progress = (clamped - 0.1) / 0.9;
-  const opacity = Math.min(1, Math.max(0, progress));
+  // progreso normal (podés ajustarlo como antes)
+  const progress = clamped;
 
-  stereoColor.style.opacity = opacity;
+  // de 100% (oculto) a 0% (visible)
+  const reveal = 100 - progress * 100;
+
+  stereoColor.style.clipPath = `inset(${reveal}% 0 0 0)`;
 });
