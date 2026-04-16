@@ -1,3 +1,4 @@
+// CAROUSEL
 const images = [
 { src: "media/fotos_carrusel/barco.jpg", label: "Imagen 1" },
 { src: "media/fotos_carrusel/estand.jpg", label: "Imagen 2" },
@@ -106,6 +107,8 @@ window.addEventListener("load", () => {
     });
 });
 
+
+// ESTEREO
 const stereoSection = document.querySelector(".stereo-section");
 const stereoColor = document.querySelector(".stereo-color");
 
@@ -118,7 +121,7 @@ window.addEventListener("scroll", () => {
   const clamped = Math.min(1, Math.max(0, scrolled));
 
   // la animación empieza cuando llegás al 40% del scroll de la sección
-  const progress = (clamped - 0.4) / 0.6;
+  const progress = (clamped - 0.1) / 0.9;
   const opacity = Math.min(1, Math.max(0, progress));
 
   stereoColor.style.opacity = opacity;
