@@ -105,3 +105,21 @@ window.addEventListener("load", () => {
         track.style.cursor = "grab";
     });
 });
+
+const stereoSection = document.querySelector(".stereo-section");
+const stereoColor = document.querySelector(".stereo-color");
+
+window.addEventListener("scroll", () => {
+  const rect = stereoSection.getBoundingClientRect();
+  const sectionHeight = stereoSection.offsetHeight - window.innerHeight;
+
+  // cuánto scrolleaste dentro de la sección (0 a 1)
+  const scrolled = -rect.top / sectionHeight;
+  const clamped = Math.min(1, Math.max(0, scrolled));
+
+  // la animación empieza cuando llegás al 40% del scroll de la sección
+  const progress = (clamped - 0.4) / 0.6;
+  const opacity = Math.min(1, Math.max(0, progress));
+
+  stereoColor.style.opacity = opacity;
+});
