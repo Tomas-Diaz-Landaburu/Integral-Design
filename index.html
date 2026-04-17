@@ -53,21 +53,27 @@
     </section>
 
     <section class="QuienesSomos-section" id="QuienesSomos">
-        <h3 class="QuienesSomos-section-subtitle">Empresa</h3>
-        <h2 class="QuienesSomos-section-title">Desde 1972</h2>
-        <h3 class="QuienesSomos-section-subtitle">Mas de 5 Decadas Dedicados al Comercio</h3>
+        <!-- Canvas de fondo con las ondas -->
+        <canvas class="QuienesSomos-waves" id="QuienesSomos-waves"></canvas>
 
-        <div class="QuienesSomos-envolve">
-            <div class="QuienesSomos-img-container">
-                <img src="media/collage.png" alt="" class="QuienesSomos-img">
-            </div>  
-            <div class="QuienesSomos-text">
-                <p>En INTEGRAL DESIGN,  ofrecemos soluciones de distribución en sectores como el audio, video, multimedia, outdoor y tecnología. <br>
-                    Nuestra red llega desde los grandes centros urbanos hasta los rincones más alejados del territorio, conectando productos con experiencias reales. <br>
-                    Nos mueve la innovación, y la construcción de relaciones sólidas. No sólo distribuimos: desarrollamos marca, cuidamos la experiencia del cliente y potenciamos cada punto de contacto
-                </p>
-                <a href="https://i.pinimg.com/564x/85/f0/53/85f0533df9912c5bd700903a918930c8.jpg" class="btn-saber-mas">SABER MAS<span class="material-icons">arrow_forward_ios</span>
-            </a>
+        <!-- Contenido (va por encima gracias a z-index) -->
+        <div class="QuienesSomos-content">
+            <h3 class="QuienesSomos-section-subtitle">Empresa</h3>
+            <h2 class="QuienesSomos-section-title">Desde 1972</h2>
+            <h3 class="QuienesSomos-section-subtitle">Mas de 5 Decadas Dedicados al Comercio</h3>
+
+            <div class="QuienesSomos-envolve">
+                <div class="QuienesSomos-img-container">
+                    <img src="media/collage.png" alt="" class="QuienesSomos-img">
+                </div>  
+                <div class="QuienesSomos-text">
+                    <p>En INTEGRAL DESIGN,  ofrecemos soluciones de distribución en sectores como el audio, video, multimedia, outdoor y tecnología. <br>
+                        Nuestra red llega desde los grandes centros urbanos hasta los rincones más alejados del territorio, conectando productos con experiencias reales. <br>
+                        Nos mueve la innovación, y la construcción de relaciones sólidas. No sólo distribuimos: desarrollamos marca, cuidamos la experiencia del cliente y potenciamos cada punto de contacto
+                    </p>
+                    <a href="https://i.pinimg.com/564x/85/f0/53/85f0533df9912c5bd700903a918930c8.jpg" class="btn-saber-mas">SABER MAS<span class="material-icons">arrow_forward_ios</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -228,5 +234,6 @@
     </div>
     </footer>
     <script src="js/carousel.js" defer></script>
+    <script src="waves.js"></script>
 </body>
 </html>
