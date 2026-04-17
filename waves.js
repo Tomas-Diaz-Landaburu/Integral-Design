@@ -21,11 +21,11 @@
     // CONFIG
     // ---------------------------------------------------------------
     const CONFIG = {
-            numLines: 30,            // de 90 → 45 (la mitad)
+            numLines: 10,            // de 90 → 45 (la mitad)
             bandHeightRatio: 0.05,   // de 0.22 → 0.08: las líneas nacen MUY juntas en el centro
-            amplitudeMin: 70,        // de 48 → 70: más movimiento vertical
-            amplitudeMax: 110,       // de 78 → 105
-            baseOpacityMin: 0.19,    // subida: menos líneas = cada una aporta más
+            amplitudeMin: 45,        // de 48 → 70: más movimiento vertical
+            amplitudeMax: 145,       // de 78 → 105
+            baseOpacityMin: 0.29,    // subida: menos líneas = cada una aporta más
             baseOpacityMax: 0.28,
             flowSpeed: 0.00240,
             step: 8,
@@ -242,7 +242,7 @@
     // ---------------------------------------------------------------
     // Cap a 30fps
     // ---------------------------------------------------------------
-    const TARGET_FPS = 30;
+    const TARGET_FPS = 40;
     const FRAME_INTERVAL = 1000 / TARGET_FPS;
     let lastFrameTime = 0;
 
