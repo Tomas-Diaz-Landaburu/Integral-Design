@@ -24,7 +24,7 @@
             numLines: 10,            // de 90 → 45 (la mitad)
             bandHeightRatio: 0.05,   // de 0.22 → 0.08: las líneas nacen MUY juntas en el centro
             amplitudeMin: 45,        // de 48 → 70: más movimiento vertical
-            amplitudeMax: 145,       // de 78 → 105
+            amplitudeMax: 80,       // de 78 → 105
             baseOpacityMin: 0.29,    // subida: menos líneas = cada una aporta más
             baseOpacityMax: 0.28,
             flowSpeed: 0.00240,
