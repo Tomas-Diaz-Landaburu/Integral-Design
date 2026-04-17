@@ -186,17 +186,47 @@ section {
 
 /* QUIENES SOMOS DESDE 1972*/
 .QuienesSomos-section{
+    position: relative;          /* <-- clave: ancla al canvas absolute */
     display: flex;
     flex-direction: column;
     align-items: center;   
-    padding: 30px 0 10px 0;  /* arriba 30px, abajo 10px */
-    text-align: center;    
+    padding: 30px 0 10px 0;
+    text-align: center;
+    background-color: #ffffff;   /* fondo base sobre el que dibujan las ondas */
+    overflow: hidden;            /* evita scroll horizontal si las ondas se salen un píxel */
 }
 
-.QuienesSomos-section{
-    background: url("media/fondos/ondas.png") no-repeat center center;
-    background-size: cover;   /* cubre el 100% */
-    background-attachment: fixed; /* efecto parallax (opcional) */
+/* Canvas de fondo — cubre toda la sección, detrás del contenido */
+.QuienesSomos-waves{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: auto;        /* deja que el mouse interactúe con las ondas */
+    display: block;
+}
+
+/* Contenedor del contenido — por encima del canvas */
+.QuienesSomos-content{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: none;        /* deja pasar el mouse al canvas por default... */
+}
+
+/* ...pero reactivamos los clicks/hover en los elementos interactivos */
+.QuienesSomos-content a,
+.QuienesSomos-content button,
+.QuienesSomos-content img,
+.QuienesSomos-content p,
+.QuienesSomos-content h2,
+.QuienesSomos-content h3{
+    pointer-events: auto;
 }
 
 .QuienesSomos-envolve{
@@ -206,16 +236,15 @@ section {
 }
 
 .QuienesSomos-section-subtitle {
-    font-size: 18px;   /* más chico que el h2 */
-    font-weight: 400;  /* más liviano */
-    margin: 0;         /* eliminamos espacios extras */
-    text-align: center;
-    letter-spacing: 2px; /* opcional, estilo elegante */
+    font-size: 18px;
     font-weight: 200;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 2px;
 }
 
 .QuienesSomos-section-title {
-    font-size: 50px;   /* más grande y destacado */
+    font-size: 50px;
     font-weight: 700;
     text-align: center;
 }
@@ -231,7 +260,6 @@ section {
 
 .QuienesSomos-text{
     width: 100%;
-    
 }
 
 .QuienesSomos-text p{
@@ -243,7 +271,6 @@ section {
 
 .btn-saber-mas {
     margin-top: 20px;
-
     background-color: #0056b3;
     border: none;
     font-size: 16px;
@@ -251,9 +278,9 @@ section {
     color: white;
     border-radius: 4px;
     cursor: pointer;
-
     align-items: center;
     text-decoration: none;
+    display: inline-block;
 }
 
 .btn-saber-mas:hover {
