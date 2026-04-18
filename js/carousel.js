@@ -109,18 +109,32 @@ window.addEventListener("load", () => {
 const stereoSection = document.querySelector(".stereo-section");
 const stereoColor = document.querySelector(".stereo-color");
 
-window.addEventListener("scroll", () => {
+const HEAD_START = 0.2; // arranca al 20%
+const EARLY_FINISH = 0.2; // termina cuando queda 20% de scroll por hacer
+
+const onScroll = () => {
   const rect = stereoSection.getBoundingClientRect();
   const sectionHeight = stereoSection.offsetHeight - window.innerHeight;
 
-  const scrolled = -rect.top / sectionHeight;
-  const clamped = Math.min(1, Math.max(0, scrolled));
+  const rawProgress = -rect.top / sectionHeight;
+  // remapeamos: el rango [0, 1] se convierte en [HEAD_START, 1 - EARLY_FINISH]... 
+  // pero queremos que clamped llegue a 1 antes, así que escalamos distinto
+  const adjusted = (rawProgress - 0) / (1 - EARLY_FINISH);
+  const clamped = Math.min(1, Math.max(0, adjusted * (1 - HEAD_START) + HEAD_START));
 
-  // progreso normal (podés ajustarlo como antes)
-  const progress = clamped;
-
-  // de 100% (oculto) a 0% (visible)
-  const reveal = 100 - progress * 100;
-
+  const reveal = 100 - clamped * 100;
   stereoColor.style.clipPath = `inset(${reveal}% 0 0 0)`;
-});
+
+  if (clamped >= 1) {
+    window.removeEventListener("scroll", onScroll);
+    stereoColor.style.clipPath = `inset(0% 0 0 0)`;
+
+    requestAnimationFrame(() => {
+      const sectionTop = stereoSection.offsetTop;
+      stereoSection.style.height = "100vh";
+      window.scrollTo({ top: sectionTop, behavior: "instant" });
+    });
+  }
+};
+
+window.addEventListener("scroll", onScroll);
