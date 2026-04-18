@@ -97,7 +97,7 @@ section {
 }
 
 .navbar a img{
-    width: 4rem;
+    width: 3rem;
     border-radius: 0.6rem;
     position: relative;
     top: 5px;
@@ -254,8 +254,9 @@ section {
 }
 
 .QuienesSomos-img-container img{
+    margin-top: 100px; /*CORREGIR ESTO*/
     height: auto;
-    width: 45rem;
+    width: 25rem;
 }
 
 .QuienesSomos-text{

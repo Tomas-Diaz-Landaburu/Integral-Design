@@ -1,17 +1,14 @@
 // CAROUSEL
 const images = [
 { src: "media/fotos_carrusel/barco.jpg", label: "Imagen 1" },
-{ src: "media/fotos_carrusel/estand.jpg", label: "Imagen 2" },
 { src: "media/fotos_carrusel/estand2.jpg", label: "Imagen 3" },
 { src: "media/fotos_carrusel/IMG_5597.jpeg", label: "Imagen 4" },
 { src: "media/fotos_carrusel/tablero.jpeg", label: "Imagen 5" },
 { src: "media/fotos_carrusel/lancha1.jpg", label: "Imagen 6" },
 { src: "media/fotos_carrusel/lancha2.jpg", label: "Imagen 7" },
-// { src: "media/fotos_carrusel/lancha3.HEIC", label: "Imagen 8" },
-// { src: "media/fotos_carrusel/lancha4.HEIC", label: "Imagen 9" },
 { src: "media/fotos_carrusel/moto1.jpg", label: "Imagen 10" },
-// { src: "media/fotos_carrusel/moto2.JPG,", label: "Imagen 11" },
-// { src: "media/fotos_carrusel/moto3.jpeg,", label: "Imagen 12" },
+{ src: "media/fotos_carrusel/camioneta_carpa.jpg", label: "Imagen 11" },
+{ src: "media/fotos_carrusel/camioneta_carpa_bk.jpg", label: "Imagen 12" },
 ];
 
 const track = document.getElementById("track");
