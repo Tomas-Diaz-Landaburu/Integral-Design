@@ -7,7 +7,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
-    scrollbar-width: none;
+    /* scrollbar-width: none; */
 }
 
 section {
@@ -22,6 +22,7 @@ section {
     margin: 0;
     color: black;
 }
+
 
 .NuestraExperiencia-title h1{
     font-size: 50px;   /* más grande y destacado */
