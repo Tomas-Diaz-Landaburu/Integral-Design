@@ -186,17 +186,18 @@ section {
 
 /* QUIENES SOMOS DESDE 1972*/
 .QuienesSomos-section{
-    position: relative;          /* <-- clave: ancla al canvas absolute */
+    min-height: calc(100vh - 120px);
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;   
     padding: 30px 0 10px 0;
     text-align: center;
-    background-color: #ffffff;   /* fondo base sobre el que dibujan las ondas */
-    overflow: hidden;            /* evita scroll horizontal si las ondas se salen un píxel */
+    background-color: #ffffff;
+    overflow: hidden;
 }
 
-/* Canvas de fondo — cubre toda la sección, detrás del contenido */
+/* Canvas de fondo */
 .QuienesSomos-waves{
     position: absolute;
     top: 0;
@@ -204,22 +205,22 @@ section {
     width: 100%;
     height: 100%;
     z-index: 0;
-    pointer-events: auto;        /* deja que el mouse interactúe con las ondas */
+    pointer-events: auto;
     display: block;
 }
 
-/* Contenedor del contenido — por encima del canvas */
+/* Contenedor del contenido */
 .QuienesSomos-content{
     position: relative;
     z-index: 1;
     width: 100%;
+    flex: 1;                        /* ocupa el espacio restante */
     display: flex;
     flex-direction: column;
     align-items: center;
-    pointer-events: none;        /* deja pasar el mouse al canvas por default... */
+    pointer-events: none;
 }
 
-/* ...pero reactivamos los clicks/hover en los elementos interactivos */
 .QuienesSomos-content a,
 .QuienesSomos-content button,
 .QuienesSomos-content img,
@@ -229,10 +230,15 @@ section {
     pointer-events: auto;
 }
 
+/* ENVOLVE: ahora centra verticalmente la grilla + texto en el espacio sobrante */
 .QuienesSomos-envolve{
     display: flex;
-    align-items: center;                 
-    width: 80%;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 90%;
+    flex: 1;                        /* toma el alto disponible */
+    margin-top: 20px;
 }
 
 .QuienesSomos-section-subtitle {
@@ -249,24 +255,68 @@ section {
     text-align: center;
 }
 
-.QuienesSomos-img-container{
+/* ============================================
+   GRILLA COLLAGE
+   ============================================ */
+.QuienesSomos-collage {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: 75px;
+    gap: 0;
+    width: 760px;
+    flex-shrink: 0;
+}
+
+.qs-cell {
+    overflow: hidden;
+    background: #eee;
+}
+
+.qs-cell img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-.QuienesSomos-img-container img{
-    margin-top: 100px; /*CORREGIR ESTO*/
-    height: auto;
-    width: 25rem;
+.qs-big {
+    grid-column: span 2;
+    grid-row: span 2;
 }
 
+/* Posicionamiento de cada celda */
+.qs-c1  { grid-column: 3 / 5; grid-row: 1 / 3; }
+.qs-c2  { grid-column: 7 / 8; grid-row: 1 / 2; }
+.qs-c3  { grid-column: 1 / 3; grid-row: 2 / 4; }
+.qs-c4  { grid-column: 5 / 6; grid-row: 2 / 3; }
+.qs-c5  { grid-column: 6 / 7; grid-row: 2 / 3; }
+.qs-c6  { grid-column: 4 / 5; grid-row: 3 / 4; }
+.qs-c7  { grid-column: 6 / 8; grid-row: 3 / 5; }
+.qs-c8  { grid-column: 3 / 4; grid-row: 4 / 5; }
+.qs-c9  { grid-column: 4 / 5; grid-row: 4 / 5; }
+.qs-c10 { grid-column: 8 / 9; grid-row: 4 / 6; }
+.qs-c11 { grid-column: 1 / 2; grid-row: 5 / 6; }
+.qs-c12 { grid-column: 2 / 4; grid-row: 5 / 7; }
+.qs-c13 { grid-column: 4 / 5; grid-row: 5 / 6; }
+.qs-c14 { grid-column: 5 / 7; grid-row: 5 / 7; }
+.qs-c15 { grid-column: 1 / 2; grid-row: 6 / 7; }
+.qs-c16 { grid-column: 4 / 5; grid-row: 6 / 7; }
+.qs-c17 { grid-column: 7 / 8; grid-row: 6 / 7; }
+.qs-c18 { grid-column: 3 / 4; grid-row: 7 / 8; }
+.qs-c19 { grid-column: 6 / 7; grid-row: 7 / 8; }
+.qs-c20 { grid-column: 7 / 8; grid-row: 7 / 8; }
+
+/* ============================================
+   TEXTO
+   ============================================ */
 .QuienesSomos-text{
-    width: 100%;
+    flex: 1;
+    max-width: 600px;
 }
 
 .QuienesSomos-text p{
     color: black;
     line-height: 28px;
-    width: 60%;
     margin: 0 auto 30px;
 }
 
@@ -296,6 +346,42 @@ section {
     top: 3px;           
     left: 5px;   
     color: white;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 900px) {
+    .QuienesSomos-section {
+        height: auto;
+        min-height: calc(100vh - 120px);
+    }
+
+    .QuienesSomos-envolve {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .QuienesSomos-collage {
+        width: 100%;
+        max-width: 500px;
+        grid-auto-rows: 45px;
+    }
+
+    .QuienesSomos-text {
+        max-width: 100%;
+        width: 90%;
+    }
+
+    .QuienesSomos-section-title {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 500px) {
+    .QuienesSomos-collage {
+        grid-auto-rows: 35px;
+    }
 }
 
 /* NUESTRA EXPERIENCIA */
