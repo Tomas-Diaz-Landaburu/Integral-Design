@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integral Design</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="media/logos/fav_icon_IntegralDesign.png" type="image/png">
+
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><img src="./media/logos/intergralDesignBlancoNegroSinFondo.svg" alt=""></a>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+
+
+        <nav class="navbar">
+            <a href="#inicio" style="--i:1;">Inicio</a>
+            <a href="#QuienesSomos" style="--i:2;">Quienes Somos</a>
+            <a href="#QueHacemos" style="--i:2;">Que Hacemos</a>
+            <a href="mailto:adl@integraldesign.com.ar?subject=Consulta&body=" style="--i:5;">Contacto</a>            
+            <a href="#" style="--i:5;"><img src="./media/logos/bandera_argentina.png" alt=""></a>
+        </nav>
+    </header>
+ 
+    <section class="img-section" id="inicio">
+        <div class="img-overlay">
+            <h1>Integral Design</h1>
+            <p>Cuando cambiamos, el mundo cambia.<br>
+            Servimos para transformar.</p>
+
+            <a href="https://integralaudio.com.ar/?srsltid=AfmBOoqCJTKo3U14lQkjf4f-_pEmF0gR2Idx26Tm_n7UoICc_vnBCL25" class="btn-link" target="_blank">
+                <button>
+                    <div>Tienda Online</div>
+                    <img src="media/logos/integralAudio_a.png" alt="">
+                </button>
+            </a>
+        </div>
+    </section>
+
+    <section class="QuienesSomos-section" id="QuienesSomos">
+        <!-- Canvas de fondo con las ondas -->
+        <canvas class="QuienesSomos-waves" id="QuienesSomos-waves"></canvas>
+
+        <!-- Contenido (va por encima gracias a z-index) -->
+        <div class="QuienesSomos-content">
+            <h3 class="QuienesSomos-section-subtitle">Empresa</h3>
+            <h2 class="QuienesSomos-section-title">Desde 1970</h2>
+            <h3 class="QuienesSomos-section-subtitle">Mas de 5 Decadas Dedicados al Comercio</h3>
+
+            <div class="QuienesSomos-envolve">
+                <!-- GRILLA COLLAGE -->
+                <div class="QuienesSomos-collage">
+                    <div class="qs-cell qs-c1 qs-big">
+                        <img src="https://picsum.photos/id/1011/400/400" alt="">
+                    </div>
+                    <div class="qs-cell qs-c2">
+                        <img src="https://picsum.photos/id/1015/200/200" alt="">
+                    </div>
+                    <div class="qs-cell qs-c3 qs-big">
+                        <img src="https://picsum.photos/id/1025/400/400" alt="">
+                    </div>
+                    <div class="qs-cell qs-c4">
+                        <img src="https://picsum.photos/id/1035/200/200" alt="">
+                    </div>
+                    <div class="qs-cell qs-c5">
+                        <img src="https://picsum.photos/id/1043/200/200" alt="">
+                    </div>
+                    <div class="qs-cell qs-c6">
+                        <img src="https://picsum.photos/id/1050/200/200" alt="">
+                    </div>
+                    <div class="qs-cell qs-c7 qs-big">
+                        <img src="https://picsum.photos/id/1062/400/400" alt="">
+                    </div>
+                    <div class="qs-cell qs-c8">
+                        <img src="https://picsum.photos/id/1074/200/200" alt="">
+                    </div>
+                    <div class="qs-cell qs-c9">
+                        <img src="https://picsum.photos/id/1084/200/200" alt="">
+                    </div>
+                    <div class="qs-cell qs-c10 qs-big">
+                        <img src="https://picsum.photos/id/109/400/400" alt="">
+                    </div>
+                    <div class="qs-cell qs-c11">
+                        <img src="https://picsum.photos/id/110/200/200" alt="">
+                    </div>
+                    <div class="qs-cell qs-c12 qs-big">
+                        <img src="https://picsum.photos/id/111/400/400" alt="">
+                    </div>
+                    <div class="qs-cell qs-c13">
+                        <img src="https://picsum.photos/id/112/200/200" alt="">
+                    </div>
+                    <div class="qs-cell qs-c14 qs-big">
+                        <img src="https://picsum.photos/id/113/400/400" alt="">
+                    </div>
+                    <div class="qs-cell qs-c15">
+                        <img src="https://picsum.photos/id/114/200/200" alt="">
+                    </div>
+                    <div class="qs-cell qs-c16">
+                        <img src="https://picsum.photos/id/115/200/200" alt="">
+                    </div>
+                    <div class="qs-cell qs-c17">
+                        <img src="https://picsum.photos/id/116/200/200" alt="">
+                    </div>
+                    <div class="qs-cell qs-c18">
+                        <img src="https://picsum.photos/id/117/200/200" alt="">
+                    </div>
+                    <div class="qs-cell qs-c19">
+                        <img src="https://picsum.photos/id/118/200/200" alt="">
+                    </div>
+                    <div class="qs-cell qs-c20">
+                        <img src="https://picsum.photos/id/119/200/200" alt="">
+                    </div>
+                </div>
+
+                <div class="QuienesSomos-text">
+                    <p>En INTEGRAL DESIGN, ofrecemos soluciones de distribución en sectores como el audio, video, multimedia, outdoor y tecnología. <br>
+                        Nuestra red llega desde los grandes centros urbanos hasta los rincones más alejados del territorio, conectando productos con experiencias reales. <br>
+                        Nos mueve la innovación, y la construcción de relaciones sólidas. No sólo distribuimos: desarrollamos marca, cuidamos la experiencia del cliente y potenciamos cada punto de contacto
+                    </p>
+                    <a href="https://www.instagram.com/integraldesign_audio?igsh=MTNvOHA3Z3B3ZGJpMg%3D%3D&utm_source=qr" class="btn-saber-mas" target="_blank">SABER MAS<span class="material-icons">arrow_forward_ios</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="stereo-section">
+    <div class="stereo-sticky">
+        <div class="stereo-container">
+        <img src="media/Estereo/sin_color.jpeg" alt="boceto" class="stereo-boceto">
+        <img src="media/Estereo/color.jpeg" alt="color" class="stereo-color">
+        </div>
+    </div>
+    </section>
+    <section class="NuestraExperiencia-seccion">
+        <div class="NuestraExperiencia-envolve">
+            <div class="NuestraExperiencia-title">
+                <h1 id="nuestraExperienciaH1">Nuestra experiencia, nuestros cimientos</h1>
+            </div>
+            <div class="NuestraExperiencia-text">
+                <p>Durante años, fuimos parte activa del crecimiento del sector audio, video y tecnología aplicada.
+                    Instalaciones especializadas, participaciones en ferias y representamos marcas en entornos reales, donde los productos se transforman en experiencias.</p>
+            </div>
+            <div class="carousel-wrapper">
+                <div class="carousel-track" id="track"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="grid-section">
+        <div class="grid-container">
+            <!-- Fila 1 -->
+            <div class="grid-item no-logo">
+                <span class="material-icons">route</span>
+                <span class="span-title">+50 Años</span>
+                <small>de Trayectoria</small>
+            </div>
+            <div class="grid-item no-logo">
+                <span class="material-icons">local_mall</span>
+                <span class="span-title">Ecommerce</span>
+                <small>Propio</small>
+            </div>
+            <div class="grid-item no-logo">
+                <span class="material-icons">edit</span>
+                <span class="span-title">Diseño y Fabricación</span>
+                <small>Colaborativa</small>
+            </div>  
+            <div class="grid-item no-logo">
+                <span class="material-icons">handshake</span>
+                <span class="span-title">B2B/B2C</span>
+                <small>Orientado</small>
+            </div>
+            <div class="grid-item no-logo">
+                <span class="material-icons">location_on</span>
+                <span class="span-title">Punto de Venta</span>
+                <small>Físico</small>
+            </div>
+            <div class="grid-item no-logo">
+                <span class="material-icons">storefront</span>
+                <span class="span-title">Marketplace</span>
+                <small>Since 2005</small>
+            </div>
+        </div>
+    </section>
+
+    <section class="QueHacemos-section" id="QueHacemos">
+        <div class="QueHacemos-title">
+            <h3 class="QuienesSomos-section-subtitle">Tres divisiones, una vision compartida</h3>
+            <h2 class="QuienesSomos-section-title">Que Hacemos</h2>
+        </div>
+
+        <div class="QueHacemos-envolve">
+            <div class="QueHacemos-card">
+                <div>
+                    <img src="media/Que_hacemos/acampe.jpg" alt="">
+                    <div class="QueHacemos-text">
+                        <h4 class="QueHacemos-h4">ID Field</h4>
+                        <h5 class="QueHacemos-h5">Outdoor | Fabricación</h5>
+                        <p>Fabricamos desde el territorio. <br>Pensamos en movimiento.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="QueHacemos-card">
+                <div>
+                    <img src="media/Que_hacemos/fusion.jpg" alt="">
+                    <div class="QueHacemos-text">
+                        <h4 class="QueHacemos-h4">ID Tech</h4>
+                        <h5 class="QueHacemos-h5">Electrónica | Audio | Video</h5>
+                        <p>Diseñamos, seleccionamos y ofrecemos tecnología de alto rendimiento </p>
+                    </div>
+                </div>
+            </div>
+            <div class="QueHacemos-card">
+                <div>
+                    <img src="media/Que_hacemos/contenedores.png" alt="">
+                    <div class="QueHacemos-text">
+                        <h4 class="QueHacemos-h4">ID Trade</h4>
+                        <h5 class="QueHacemos-h5">Distribución | Importación</h5>
+                        <p>Importamos, distribuimos y construimos lazos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="ImgContenedor">
+        <!-- <img src="media/fondos/toyotaHilux.png" alt=""> -->
+    </div>
+    <section class="NuestrasMarcas-section">
+        <div class="NuestrasMarcas-title">
+            <h2 class="QuienesSomos-section-title">Marcas</h2>
+        </div>
+        <div class="marcas-container">
+            <div class="marca"><img src="media/Marcas-Fondo/MamotoGear.jpeg" alt=""></div>
+            <div class="marca"><img src="media/Marcas-Fondo/Saxon.png" alt=""></div>
+            <div class="marca"><img src="media/Marcas-Fondo/Alpine.png" alt=""></div>
+            <div class="marca"><img src="media/Marcas-Fondo/Integraldesign.png" alt=""></div>
+            <div class="marca"><img src="media/Marcas-Fondo/Integralaudio.png" alt=""></div>
+            <div class="marca"><img src="media/Marcas-Fondo/Fusion.png" alt="Integral Design"></div>
+            <div class="marca"><img src="media/Marcas-Fondo/JLaudio.jpg" alt=""></div>
+            <div class="marca"><img src="media/Marcas-Fondo/Garmin.png" alt="Garmin"></div>
+            <div class="marca"><img src="media/Marcas-Fondo/Audiopipe.jpg" alt="Audiopipe"></div>
+            <div class="marca"><img src="media/Marcas-Fondo/Pipeman.avif" alt=""></div>
+            <div class="marca"><img src="media/Marcas-Fondo/Na.webp" alt=""></div>
+            <div class="marca"><img src="media/Marcas-Fondo/philips.svg" alt="Audiopipe"></div>
+
+        </div>
+    </section>
+
+    <section class="img-section-2">
+        <div class="img-overlay-2">
+            <p>De la mano de las grandes marcas evolucionamos dia a dia para mejorar la atención a nuestros clientes<br><strong>Gracias por elejirnos</strong> 
+            <!-- Trabajamos con marcas que comparten nuestra visión:
+            crecer de forma sostenible, con innovación, excelencia operativa y foco en el cliente.
+            <br><strong>Co-creemos juntos</strong></p> -->
+        </div>
+    </section>
+    
+    <footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="media/logos/intergralDesignBlancoNegroSinFondo.svg" alt="">
+        </div>
+
+        <div class="footer-links">
+        <h3 class="footer-heading">Informacion</h3>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#QuienesSomos">Quienes Somos</a></li>
+            <li><a href="#QueHacemos">Que Hacemos</a></li>
+        </ul>
+        </div>
+
+        <div class="footer-contact">
+        <h3 class="footer-heading">Co-Creemos Juntos</h3>
+        <a href="mailto:adl@integraldesign.com.ar?subject=Consulta&body=" class="contact-btn">CONTACTANOS</a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>Copyright ©️ 2025. Todos los derechos reservados</p>
+        <p>Alvear 766, San Fernando CP: 1645, Buenos Aires</p>
+    </div>
+    </footer>
+    <script src="js/carousel.js" defer></script>
+    <script src="waves.js"></script>
+</body>
+</html>
