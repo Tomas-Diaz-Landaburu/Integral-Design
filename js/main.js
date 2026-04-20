@@ -116,7 +116,7 @@ const brands = [
   { src: "media/Marcas-Fondo/InstallationSolution.png",        name: "Pipeman",           invert: false },
   { src: "media/Marcas-Fondo/Na.png",              name: "NipponAmerica",     invert: false },
   { src: "media/Marcas-Fondo/Saxon.png",           name: "Saxon",             invert: false },
-  { src: "media/Marcas-Fondo/MamotoGear.jpeg",     name: "MaMoto Gear",       invert: false },
+  { src: "media/Marcas-Fondo/MamotoGear.png",     name: "MaMoto Gear",       invert: false },
   { src: "media/Marcas-Fondo/philips.png",         name: "Philips",           invert: true },
 ];
 
