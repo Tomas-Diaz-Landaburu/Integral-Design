@@ -335,7 +335,7 @@ section { scroll-margin-top: 90px; }
   content: ""; width: 32px; height: 1px; background: currentColor; opacity: 0.4;
 }
 .sh-title {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-weight: 300;
   font-size: clamp(42px, 5.5vw, 80px);
   line-height: 1;

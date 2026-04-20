@@ -44,17 +44,17 @@ window.addEventListener('scroll', setActive, { passive: true });
    -------------------------------------------------------------- */
 const carouselData = [
   { src: "media/fotos_carrusel/barco.jpg",              tag: "Náutica" },
-  { src: "media/fotos_carrusel/estand.jpg",             tag: "Retail" },
+  { src: "media/fotos_carrusel/estand.jpg",             tag: "Feria" },
   { src: "media/fotos_carrusel/lancha2.jpg",            tag: "Marine Audio" },
   { src: "media/fotos_carrusel/moto1.jpg",              tag: "Motos" },
   { src: "media/fotos_carrusel/tablero.jpeg",           tag: "Electrónica" },
   { src: "media/fotos_carrusel/IMG_5597.jpeg",          tag: "Instalación" },
   { src: "media/fotos_carrusel/lancha1.jpg",            tag: "Náutica" },
   { src: "media/fotos_carrusel/camioneta_carpa.jpg",    tag: "Outdoor" },
-  { src: "media/fotos_carrusel/moto3.jpeg",             tag: "Touring" },
+  { src: "media/fotos_carrusel/moto3.jpeg",             tag: "Outdoor" },
   { src: "media/fotos_carrusel/camioneta_carpa_bk.jpg", tag: "Expedición" },
-  { src: "media/fotos_carrusel/estand2.jpg",            tag: "Show" },
-  { src: "media/fotos_carrusel/moto2.JPG",              tag: "Aventura" },
+  { src: "media/fotos_carrusel/estand2.jpg",            tag: "Feria" },
+  { src: "media/fotos_carrusel/moto2.JPG",              tag: "Expedición" },
 ];
 
 const track = document.getElementById("track");
@@ -113,7 +113,7 @@ const brands = [
   { src: "media/Marcas-Fondo/Garmin.png",          name: "Garmin",            invert: true },
   { src: "media/Marcas-Fondo/JLaudio.jpg",         name: "JL Audio",          invert: true },
   { src: "media/Marcas-Fondo/Audiopipe.jpg",       name: "Audiopipe",         invert: true },
-  { src: "media/Marcas-Fondo/Pipeman.avif",        name: "Pipeman",           invert: false },
+  { src: "media/Marcas-Fondo/InstallationSolution.png",        name: "Pipeman",           invert: false },
   { src: "media/Marcas-Fondo/Na.png",              name: "NipponAmerica",     invert: false },
   { src: "media/Marcas-Fondo/Saxon.png",           name: "Saxon",             invert: false },
   { src: "media/Marcas-Fondo/MamotoGear.jpeg",     name: "MaMoto Gear",       invert: false },
