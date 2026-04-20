@@ -545,7 +545,8 @@ section { scroll-margin-top: 90px; }
 }
 .stereo-container {
   position: relative;
-  width: min(900px, 85vw);
+  /* width: min(1500px, 90vw); */
+  width: 100%;
   aspect-ratio: 1 / 1;
   z-index: 1;
 }
