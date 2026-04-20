@@ -82,8 +82,7 @@ section { scroll-margin-top: 90px; }
 }
 
 .logo { display: flex; align-items: center; }
-.logo img { height: 38px; width: auto; transition: transform 0.4s ease; }
-.logo:hover img { transform: rotate(-4deg) scale(1.04); }
+.logo img { height: 60px; width: auto; transition: transform 0.4s ease;}
 
 .navbar {
   display: flex;

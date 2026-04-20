@@ -114,10 +114,10 @@ const brands = [
   { src: "media/Marcas-Fondo/JLaudio.jpg",         name: "JL Audio",          invert: true },
   { src: "media/Marcas-Fondo/Audiopipe.jpg",       name: "Audiopipe",         invert: true },
   { src: "media/Marcas-Fondo/Pipeman.avif",        name: "Pipeman",           invert: false },
-  { src: "media/Marcas-Fondo/Na.webp",             name: "NipponAmerica",     invert: false },
+  { src: "media/Marcas-Fondo/Na.png",              name: "NipponAmerica",     invert: false },
   { src: "media/Marcas-Fondo/Saxon.png",           name: "Saxon",             invert: false },
   { src: "media/Marcas-Fondo/MamotoGear.jpeg",     name: "MaMoto Gear",       invert: false },
-  { src: "media/Marcas-Fondo/philips.svg",         name: "Philips",           invert: true },
+  { src: "media/Marcas-Fondo/philips.png",         name: "Philips",           invert: true },
 ];
 
 const buildBrandTile = b => {
