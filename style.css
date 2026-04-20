@@ -9,8 +9,9 @@
   --serif: 'Fraunces', Georgia, serif;
   --mono: 'JetBrains Mono', 'SFMono-Regular', monospace;
 
-  --cream: #f6f3ec;
+  /* --cream: #f6f3ec; */
   --cream-2: #ece8dd;
+  --cream: white;
   --paper: #ffffff;
   --ink: #141414;
   --ink-2: #2a2a2a;
