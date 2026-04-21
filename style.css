@@ -1202,65 +1202,221 @@ section { scroll-margin-top: 90px; }
 
 /* =============================================================
    RESPONSIVE
+   Breakpoints:
+     - 1024px (tablet)
+     - 768px  (mobile)
    ============================================================= */
-@media (max-width: 1100px) {
+
+/* Oculta por defecto los dos íconos del label (se muestran solo en mobile) */
+.icons #menu-icon,
+.icons #close-icon { display: none; }
+
+/* -------------------------------------------------------------
+   TABLET — hasta 1024px
+   ------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .header { padding: 16px 32px; }
+  .header.scrolled { padding: 12px 32px; }
+
+  /* Hero */
+  .hero-inner { padding: 0 40px; }
+  .hero-meta { left: 40px; gap: 32px; }
+  .hero-scroll { right: 40px; }
+
+  /* Quiénes somos */
+  .QuienesSomos-content { padding: 0 32px; }
   .QuienesSomos-envolve { grid-template-columns: 1fr; gap: 48px; }
   .QuienesSomos-collage { max-width: 640px; margin: 0 auto; }
-  .QuienesSomos-text { border-left: 0; padding-left: 0; }
-  .qh-columns { grid-template-columns: 1fr; min-height: auto; }
-  .qh-col { min-height: 420px; }
+  .QuienesSomos-text {
+    border-left: 0;
+    padding-left: 0;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  /* Features grid */
+  .grid-section { padding: 100px 32px; }
   .grid-container { grid-template-columns: repeat(2, 1fr); }
-  .footer-container { grid-template-columns: 1fr 1fr; }
+
+  /* Qué hacemos */
+  .qh-header {
+    grid-template-columns: 1fr;
+    padding: 90px 32px 40px;
+    gap: 28px;
+  }
+  .qh-columns { grid-template-columns: 1fr; min-height: auto; }
+  .qh-col { min-height: 420px; padding: 48px 32px; }
+  /* En tablet/mobile mostramos la descripción siempre (el hover no se aplica) */
+  .qh-desc { max-height: 200px; opacity: 1; margin-bottom: 22px; }
+  .qh-foot { padding: 20px 32px; }
+
+  /* Marcas */
+  .brand-tile { width: 200px; height: 120px; padding: 24px; }
+
+  /* Stereo — agrandar el producto para que se vea en tablet */
+  .stereo-container { transform: scale(1.6); }
+
+  /* Footer */
+  .site-footer { padding: 70px 32px 28px; }
+  .footer-container { grid-template-columns: 1fr 1fr; gap: 40px; }
 }
 
-@media (max-width: 900px) {
-  .header { padding: 14px 24px; }
-  .header.scrolled { padding: 10px 24px; }
-  .icons { display: inline-flex; }
+/* -------------------------------------------------------------
+   MOBILE — hasta 768px
+   ------------------------------------------------------------- */
+@media (max-width: 768px) {
+  /* HEADER + MENU HAMBURGUESA */
+  .header { padding: 14px 20px; }
+  .header.scrolled { padding: 10px 20px; }
+
+  /* En mobile el header tiene fondo por defecto para que el menú lo tape bien */
+  .header::before {
+    background: rgba(14,14,14,0.85);
+    backdrop-filter: saturate(140%) blur(14px);
+    -webkit-backdrop-filter: saturate(140%) blur(14px);
+  }
+
+  .logo img { height: 48px; }
+
+  /* Mostrar el ícono hamburguesa */
+  .icons {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px; height: 36px;
+    font-size: 30px;
+    position: relative;
+  }
+  /* Por defecto se muestra el menú (hamburguesa) */
+  .icons #menu-icon { display: inline-block; }
+  .icons #close-icon { display: none; }
+  /* Cuando el checkbox está activo, invertimos: se muestra la X */
+  #check:checked ~ .icons #menu-icon { display: none; }
+  #check:checked ~ .icons #close-icon { display: inline-block; }
+
+  /* Navbar en mobile: dropdown desde arriba */
   .navbar {
     position: absolute;
     top: 100%; left: 0; right: 0;
-    background: rgba(14,14,14,0.96);
-    backdrop-filter: blur(20px);
+    background: rgba(14,14,14,0.97);
+    backdrop-filter: saturate(160%) blur(20px);
+    -webkit-backdrop-filter: saturate(160%) blur(20px);
     flex-direction: column;
-    padding: 24px;
-    gap: 18px;
+    align-items: flex-start;
+    gap: 0;
+    padding: 0 24px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.35s ease;
+    transition: max-height 0.4s cubic-bezier(.2,.7,.2,1), padding 0.4s ease;
+    border-top: 1px solid rgba(255,255,255,0.06);
   }
-  #check:checked ~ .navbar { max-height: 400px; padding: 24px; }
+  #check:checked ~ .navbar {
+    max-height: 500px;
+    padding: 16px 24px 24px;
+  }
+  .navbar a {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .navbar a:last-child { border-bottom: 0; }
+  /* Sacamos el subrayado animado que queda raro en el dropdown */
+  .navbar a:not(.nav-flag)::after { display: none; }
 
+  /* HERO */
   .hero-inner { padding: 0 24px; }
-  .hero-meta, .hero-scroll { left: 24px; right: 24px; }
+  .hero h1 { font-size: clamp(40px, 11vw, 64px); }
+  .hero-eyebrow { font-size: 12px; letter-spacing: 0.2em; margin-bottom: 20px; }
+  .hero p.hero-lede { font-size: 15px; margin-bottom: 32px; }
+  .hero-ctas { gap: 14px; }
+  .btn-primary, .btn-ghost { padding: 14px 20px; font-size: 12px; }
+  .btn-primary { padding-left: 22px; }
+
+  .hero-meta {
+    bottom: 24px; left: 24px; right: 24px;
+    gap: 18px;
+    font-size: 10px;
+  }
+  .hero-meta .divider { height: 22px; }
   .hero-scroll { display: none; }
 
+  /* QUIENES SOMOS */
+  .QuienesSomos-section { padding: 80px 0 60px; }
   .QuienesSomos-content { padding: 0 24px; }
-  .grid-section { padding: 80px 24px; }
-  .grid-container { grid-template-columns: 1fr; }
+  .QuienesSomos-collage { grid-auto-rows: 90px; gap: 8px; }
+  .QuienesSomos-text h3 { font-size: 16px; margin-bottom: 24px; }
+  .QuienesSomos-text p { font-size: 15px; }
+  .qs-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 32px;
+    padding-top: 24px;
+  }
+  .qs-stat .num { font-size: 28px; }
+  .qs-stat .lbl { font-size: 9px; letter-spacing: 0.15em; }
 
-  .qh-header { grid-template-columns: 1fr; padding: 80px 24px 40px; gap: 24px; }
-  .qh-legend { text-align: left; min-width: 0; }
-  .qh-legend div { justify-content: flex-start; }
-  .qh-foot { padding: 20px 24px; flex-direction: column; gap: 6px; }
-
-  .marcas-section { padding: 80px 0; }
-  .brand-tile { width: 180px; height: 110px; padding: 20px; }
-
-  .site-footer { padding: 60px 24px 28px; }
-  .footer-container { grid-template-columns: 1fr; gap: 32px; }
-  .footer-bottom { flex-direction: column; text-align: center; }
-  .stereo-container { transform: scale(2.9); }
-}
-
-@media (max-width: 600px) {
-  .hero h1 { font-size: clamp(40px, 12vw, 64px); }
+  /* STEREO */
+  .stereo-section { height: 220vh; }
+  .stereo-container { transform: scale(2.2); }
   .stereo-meta, .stereo-caption {
     left: 24px; right: 24px; bottom: 32px;
     max-width: none; text-align: left; font-size: 11px;
   }
   .stereo-caption { display: none; }
-  .carousel-item { width: 280px; height: 360px; }
+
+  /* NUESTRA EXPERIENCIA (carrusel) */
+  .NuestraExperiencia-seccion { padding: 80px 0 70px; }
+  .sh { margin-bottom: 40px; }
+  .sh-sub { padding: 0 24px; font-size: 14px; }
+  .carousel-item { width: 260px; height: 340px; }
+
+  /* FEATURES GRID */
+  .grid-section { padding: 70px 20px; }
+  .grid-container { grid-template-columns: 1fr; }
+  .grid-item { padding: 36px 28px; min-height: 200px; }
+  .span-title { font-size: 26px; }
+
+  /* QUE HACEMOS */
+  .qh-header { padding: 70px 24px 32px; }
+  .qh-legend { text-align: left; min-width: 0; font-size: 10px; }
+  .qh-legend div { justify-content: flex-start; }
+  .qh-col { min-height: 360px; padding: 40px 24px; }
+  .qh-num, .qh-div { top: 24px; font-size: 10px; }
+  .qh-num { left: 24px; }
+  .qh-div { right: 24px; }
+  .qh-id { font-size: clamp(40px, 10vw, 56px); }
+  .qh-foot { padding: 20px 24px; flex-direction: column; gap: 6px; }
+
+  /* MARCAS */
+  .marcas-section { padding: 70px 0; }
+  .brand-tile { width: 160px; height: 100px; padding: 18px; }
+
+  /* CLOSING BANNER */
+  .img-section-2 { min-height: 420px; }
+  .img-overlay-2 { padding: 0 24px; }
+  .img-overlay-2 p { font-size: clamp(22px, 6vw, 32px); }
+
+  /* FOOTER */
+  .site-footer { padding: 60px 24px 28px; }
+  .footer-container { grid-template-columns: 1fr; gap: 32px; }
+  .footer-logo img { height: 52px; }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+    font-size: 10px;
+  }
+}
+
+/* -------------------------------------------------------------
+   MOBILE CHICO — hasta 420px (ajustes finos)
+   ------------------------------------------------------------- */
+@media (max-width: 420px) {
+  .hero-meta { flex-wrap: wrap; gap: 10px 16px; }
+  .hero-meta .divider { display: none; }
+  .qs-stats { grid-template-columns: 1fr; }
+  .qs-stat { text-align: left; }
 }
 
 /* reduce-motion */
