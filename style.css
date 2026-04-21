@@ -1249,6 +1249,7 @@ section { scroll-margin-top: 90px; }
   .site-footer { padding: 60px 24px 28px; }
   .footer-container { grid-template-columns: 1fr; gap: 32px; }
   .footer-bottom { flex-direction: column; text-align: center; }
+  .stereo-container { transform: scale(2.9); }
 }
 
 @media (max-width: 600px) {
