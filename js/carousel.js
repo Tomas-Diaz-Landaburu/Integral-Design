@@ -51,8 +51,8 @@ window.addEventListener("load", () => {
     track.addEventListener("mouseleave", () => {
     isDown = false;
     track.style.cursor = "grab";
-    track.style.animation = `scroll-left 40s linear infinite`;
-    track.style.animationDelay = `${currentOffset / totalWidth * 40}s`;
+    track.style.animation = `scroll-left 20s linear infinite`;
+    track.style.animationDelay = `${currentOffset / totalWidth * 10}s`;
     });
 
     track.addEventListener("mouseup", (e) => {
