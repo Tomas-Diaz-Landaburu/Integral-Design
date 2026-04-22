@@ -43,18 +43,18 @@ window.addEventListener('scroll', setActive, { passive: true });
    CAROUSEL — build track, drag support, infinite loop
    -------------------------------------------------------------- */
 const carouselData = [
-  { src: "media/Fotos/nautica.jpg",              tag: "Náutica" },
-  { src: "media/Fotos/feria.jpg",             tag: "Feria" },
-  { src: "media/Fotos/marine_audio.jpg",            tag: "Marine Audio" },
-  { src: "media/Fotos/motos.jpg",              tag: "Motos" },
-  { src: "media/Fotos/tablero.jpeg",           tag: "Electrónica" },
-  { src: "media/Fotos/instalacion.jpeg",          tag: "Instalación" },
-  { src: "media/Fotos/nautica_2.jpg",            tag: "Náutica" },
-  { src: "media/Fotos/outdoor_cl.jpg",    tag: "Outdoor" },
-  { src: "media/Fotos/outdoor_2.jpeg",             tag: "Outdoor" },
-  { src: "media/Fotos/expedicion_2.jpg", tag: "Expedición" },
-  { src: "media/Fotos/feria.jpg",            tag: "Feria" },
-  { src: "media/Fotos/motos_2.jpg",              tag: "Expedición" },
+  { src: "media/Fotos/nautica.webp",              tag: "Náutica" },
+  { src: "media/Fotos/feria.webp",             tag: "Feria" },
+  { src: "media/Fotos/marine_audio.webp",            tag: "Marine Audio" },
+  { src: "media/Fotos/motos.webp",              tag: "Motos" },
+  { src: "media/Fotos/tablero.webp",           tag: "Electrónica" },
+  { src: "media/Fotos/instalacion.webp",          tag: "Instalación" },
+  { src: "media/Fotos/nautica_2.webp",            tag: "Náutica" },
+  { src: "media/Fotos/outdoor_cl.webp",    tag: "Outdoor" },
+  { src: "media/Fotos/outdoor_2.webp",             tag: "Outdoor" },
+  { src: "media/Fotos/expedicion_2.webp", tag: "Expedición" },
+  { src: "media/Fotos/feria.webp",            tag: "Feria" },
+  { src: "media/Fotos/motos_2.webp",              tag: "Expedición" },
 ];
 
 const track = document.getElementById("track");

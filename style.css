@@ -149,7 +149,7 @@ section { scroll-margin-top: 90px; }
 }
 .hero-bg {
   position: absolute; inset: 0;
-  background-image: url("media/Fondo/Inicio.jpg");
+  background-image: url("media/Fondo/Inicio.webp");
   background-size: cover;
   background-position: center;
   transform: scale(1.04);
