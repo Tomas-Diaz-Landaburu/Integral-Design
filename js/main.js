@@ -110,18 +110,18 @@ if (stereoSection && stereoColor) {
    MARCAS — build both marquee rows
    -------------------------------------------------------------- */
 const brands = [
-  { src: "media/Marcas/Integraldesign.png",                 name: "Integral Design",   invert: false },
-  { src: "media/Marcas/Integralaudio.png",                  name: "Integral Audio",    invert: false },
-  { src: "media/Marcas/Alpine.png",                         name: "Alpine",            invert: false },
-  { src: "media/Marcas/Fusion.png",                         name: "Fusion",            invert: false },
-  { src: "media/Marcas/Garmin.png",                         name: "Garmin",            invert: true },
-  { src: "media/Marcas/JLaudio.jpg",                        name: "JL Audio",          invert: true },
-  { src: "media/Marcas/Audiopipe.jpg",                      name: "Audiopipe",         invert: true },
-  { src: "media/Marcas/InstallationSolution.png",           name: "Pipeman",           invert: false },
-  { src: "media/Marcas/Na.png",                             name: "NipponAmerica",     invert: false },
-  { src: "media/Marcas/Saxon.png",                          name: "Saxon",             invert: false },
-  { src: "media/Marcas/MamotoGear.png",                     name: "MaMoto Gear",       invert: false },
-  { src: "media/Marcas/philips.png",                        name: "Philips",           invert: true },
+  { src: "media/Marcas/Integraldesign.webp",                 name: "Integral Design",   invert: false },
+  { src: "media/Marcas/Integralaudio.webp",                  name: "Integral Audio",    invert: false },
+  { src: "media/Marcas/Alpine.webp",                         name: "Alpine",            invert: false },
+  { src: "media/Marcas/Fusion.webp",                         name: "Fusion",            invert: false },
+  { src: "media/Marcas/Garmin.webp",                         name: "Garmin",            invert: true },
+  { src: "media/Marcas/JLaudio.webp",                        name: "JL Audio",          invert: true },
+  { src: "media/Marcas/Audiopipe.webp",                      name: "Audiopipe",         invert: true },
+  { src: "media/Marcas/InstallationSolution.webp",           name: "Pipeman",           invert: false },
+  { src: "media/Marcas/Na.webp",                             name: "NipponAmerica",     invert: false },
+  { src: "media/Marcas/Saxon.webp",                          name: "Saxon",             invert: false },
+  { src: "media/Marcas/MamotoGear.webp",                     name: "MaMoto Gear",       invert: false },
+  { src: "media/Marcas/philips.webp",                        name: "Philips",           invert: true },
 ];
 
 const buildBrandTile = b => {
