@@ -99,7 +99,7 @@
      QUIÉNES SOMOS
      ========================================================== -->
 <section class="QuienesSomos-section" id="QuienesSomos">
-  <canvas class="QuienesSomos-waves solo-desktop" id="QuienesSomos-waves"></canvas>
+  <canvas class="QuienesSomos-waves" id="QuienesSomos-waves"></canvas>
 
   <div class="QuienesSomos-content">
     <div class="sh">
@@ -381,11 +381,8 @@
   </div>
 </footer>
 
-<script src="waves.js" defer></script>
-<script src="js/main.js?v=2" defer></script>
-
-<script>
-  /* tiny inline helper: invert brand logos flagged with data-invert */
+<script src="js/main.js?v=2" defer>
+  /* efecto sobre las marcas */
   window.addEventListener('load', () => {
     document.querySelectorAll('.brand-tile img[data-invert="1"]').forEach(img => {
       img.style.filter = 'brightness(0) invert(1) opacity(0.85)';
@@ -398,6 +395,12 @@
       }
     });
   });
+  if (window.innerWidth >= 1024) {
+    const script = document.createElement('script');
+    script.src = 'ja/waves.js';
+    script.async = true;
+    document.head.appendChild(script);
+  }
 </script>
 
 </body>
