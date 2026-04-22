@@ -59,11 +59,13 @@ const carouselData = [
 
 const track = document.getElementById("track");
 if (track) {
-  const buildItem = (item, idx) => {
+  const buildItem = (item, idx, eager) => {
     const d = document.createElement('div');
     d.className = 'carousel-item';
     d.innerHTML = `
-      <img src="${item.src}" alt="${item.tag}" loading="lazy">
+      <img src="${item.src}" alt="${item.tag}" 
+          ${eager ? 'fetchpriority="high"' : 'loading="lazy" decoding="async"'}
+          width="380" height="480">
       <div class="caption">
         <span class="tag">${item.tag}</span>
         <span class="num">${String(idx + 1).padStart(2, '0')}/${String(carouselData.length).padStart(2, '0')}</span>
@@ -72,8 +74,10 @@ if (track) {
     return d;
   };
 
-  carouselData.forEach((item, i) => track.appendChild(buildItem(item, i)));
-  carouselData.forEach((item, i) => track.appendChild(buildItem(item, i))); // duplicate for seamless loop
+  // primera pasada: las primeras 3 en eager, el resto lazy
+  carouselData.forEach((item, i) => track.appendChild(buildItem(item, i, i < 3)));
+  // duplicado para el loop: todas lazy
+  carouselData.forEach((item, i) => track.appendChild(buildItem(item, i, false)));
 }
 
 /* --------------------------------------------------------------
