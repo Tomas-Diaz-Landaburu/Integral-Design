@@ -43,18 +43,18 @@ window.addEventListener('scroll', setActive, { passive: true });
    CAROUSEL — build track, drag support, infinite loop
    -------------------------------------------------------------- */
 const carouselData = [
-  { src: "media/fotos_carrusel/barco.jpg",              tag: "Náutica" },
-  { src: "media/fotos_carrusel/estand.jpg",             tag: "Feria" },
-  { src: "media/fotos_carrusel/lancha2.jpg",            tag: "Marine Audio" },
-  { src: "media/fotos_carrusel/moto1.jpg",              tag: "Motos" },
-  { src: "media/fotos_carrusel/tablero.jpeg",           tag: "Electrónica" },
-  { src: "media/fotos_carrusel/IMG_5597.jpeg",          tag: "Instalación" },
-  { src: "media/fotos_carrusel/lancha1.jpg",            tag: "Náutica" },
-  { src: "media/fotos_carrusel/camioneta_carpa.jpg",    tag: "Outdoor" },
-  { src: "media/fotos_carrusel/moto3.jpeg",             tag: "Outdoor" },
-  { src: "media/fotos_carrusel/camioneta_carpa_bk.jpg", tag: "Expedición" },
-  { src: "media/fotos_carrusel/estand2.jpg",            tag: "Feria" },
-  { src: "media/fotos_carrusel/moto2.JPG",              tag: "Expedición" },
+  { src: "media/Fotos/nautica.jpg",              tag: "Náutica" },
+  { src: "media/Fotos/feria.jpg",             tag: "Feria" },
+  { src: "media/Fotos/marine_audio.jpg",            tag: "Marine Audio" },
+  { src: "media/Fotos/motos.jpg",              tag: "Motos" },
+  { src: "media/Fotos/tablero.jpeg",           tag: "Electrónica" },
+  { src: "media/Fotos/instalacion.jpeg",          tag: "Instalación" },
+  { src: "media/Fotos/nautica_2.jpg",            tag: "Náutica" },
+  { src: "media/Fotos/outdoor_cl.jpg",    tag: "Outdoor" },
+  { src: "media/Fotos/outdoor_2.jpeg",             tag: "Outdoor" },
+  { src: "media/Fotos/expedicion_2.jpg", tag: "Expedición" },
+  { src: "media/Fotos/feria.jpg",            tag: "Feria" },
+  { src: "media/Fotos/motos_2.jpg",              tag: "Expedición" },
 ];
 
 const track = document.getElementById("track");
@@ -106,18 +106,18 @@ if (stereoSection && stereoColor) {
    MARCAS — build both marquee rows
    -------------------------------------------------------------- */
 const brands = [
-  { src: "media/Marcas-Fondo/Integraldesign.png",  name: "Integral Design",   invert: false },
-  { src: "media/Marcas-Fondo/Integralaudio.png",   name: "Integral Audio",    invert: false },
-  { src: "media/Marcas-Fondo/Alpine.png",          name: "Alpine",            invert: false },
-  { src: "media/Marcas-Fondo/Fusion.png",          name: "Fusion",            invert: false },
-  { src: "media/Marcas-Fondo/Garmin.png",          name: "Garmin",            invert: true },
-  { src: "media/Marcas-Fondo/JLaudio.jpg",         name: "JL Audio",          invert: true },
-  { src: "media/Marcas-Fondo/Audiopipe.jpg",       name: "Audiopipe",         invert: true },
-  { src: "media/Marcas-Fondo/InstallationSolution.png",        name: "Pipeman",           invert: false },
-  { src: "media/Marcas-Fondo/Na.png",              name: "NipponAmerica",     invert: false },
-  { src: "media/Marcas-Fondo/Saxon.png",           name: "Saxon",             invert: false },
-  { src: "media/Marcas-Fondo/MamotoGear.png",     name: "MaMoto Gear",       invert: false },
-  { src: "media/Marcas-Fondo/philips.png",         name: "Philips",           invert: true },
+  { src: "media/Marcas/Integraldesign.png",                 name: "Integral Design",   invert: false },
+  { src: "media/Marcas/Integralaudio.png",                  name: "Integral Audio",    invert: false },
+  { src: "media/Marcas/Alpine.png",                         name: "Alpine",            invert: false },
+  { src: "media/Marcas/Fusion.png",                         name: "Fusion",            invert: false },
+  { src: "media/Marcas/Garmin.png",                         name: "Garmin",            invert: true },
+  { src: "media/Marcas/JLaudio.jpg",                        name: "JL Audio",          invert: true },
+  { src: "media/Marcas/Audiopipe.jpg",                      name: "Audiopipe",         invert: true },
+  { src: "media/Marcas/InstallationSolution.png",           name: "Pipeman",           invert: false },
+  { src: "media/Marcas/Na.png",                             name: "NipponAmerica",     invert: false },
+  { src: "media/Marcas/Saxon.png",                          name: "Saxon",             invert: false },
+  { src: "media/Marcas/MamotoGear.png",                     name: "MaMoto Gear",       invert: false },
+  { src: "media/Marcas/philips.png",                        name: "Philips",           invert: true },
 ];
 
 const buildBrandTile = b => {

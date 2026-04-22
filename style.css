@@ -149,7 +149,7 @@ section { scroll-margin-top: 90px; }
 }
 .hero-bg {
   position: absolute; inset: 0;
-  background-image: url("media/fondos/caballos.webp");
+  background-image: url("media/Fondo/Inicio.jpg");
   background-size: cover;
   background-position: center;
   transform: scale(1.04);
@@ -1067,7 +1067,7 @@ section { scroll-margin-top: 90px; }
 .img-section-2 {
   width: 100%;
   min-height: 560px;
-  background-image: url("media/fondos/moto.jpg");
+  background-image: url("media/Fondo/CrecemosJuntos.jpg");
   background-size: cover;
   background-position: center 35%;
   position: relative;
