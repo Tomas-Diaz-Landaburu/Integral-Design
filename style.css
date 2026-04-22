@@ -154,6 +154,7 @@ section { scroll-margin-top: 90px; }
   background-position: center;
   transform: scale(1.04);
   animation: heroBgSlowZoom 24s ease-in-out infinite alternate;
+
 }
 @keyframes heroBgSlowZoom {
   from { transform: scale(1.0); }
@@ -221,6 +222,9 @@ section { scroll-margin-top: 90px; }
   margin-bottom: 40px;
   animation: fadeUp 1s ease 0.4s both;
 }
+
+.solo-mobile { display: none; }
+.solo-desktop { display: block; }
 
 .hero-ctas {
   display: flex;
@@ -619,7 +623,6 @@ section { scroll-margin-top: 90px; }
   width: max-content;
   animation: scrollLeft 55s linear infinite;
 }
-.carousel-track:hover { animation-play-state: paused; }
 @keyframes scrollLeft {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
@@ -640,7 +643,6 @@ section { scroll-margin-top: 90px; }
   object-fit: cover;
   transition: transform 0.8s cubic-bezier(.2,.7,.2,1), filter 0.4s;
 }
-.carousel-item:hover img { transform: scale(1.08); filter: brightness(1.05); }
 .carousel-item .caption {
   position: absolute;
   left: 18px; bottom: 18px; right: 18px;
@@ -658,8 +660,6 @@ section { scroll-margin-top: 90px; }
   opacity: 0;
   transition: opacity 0.4s;
 }
-.carousel-item:hover::after { opacity: 1; }
-.carousel-item:hover .caption { opacity: 1; transform: translateY(0); }
 .carousel-item .caption .tag {
   font-family: var(--mono);
   font-size: 10px;
@@ -672,6 +672,13 @@ section { scroll-margin-top: 90px; }
   font-size: 10px;
   letter-spacing: 0.2em;
   opacity: 0.6;
+}
+
+@media (hover: hover) {
+  .carousel-track:hover { animation-play-state: paused; }
+  .carousel-item:hover img { transform: scale(1.08); filter: brightness(1.05); }
+  .carousel-item:hover::after { opacity: 1; }
+  .carousel-item:hover .caption { opacity: 1; transform: translateY(0); }
 }
 
 /* =============================================================
@@ -1009,8 +1016,9 @@ section { scroll-margin-top: 90px; }
   from { transform: translateX(-50%); }
   to { transform: translateX(0); }
 }
-.marquee:hover .marquee-track { animation-play-state: paused; }
-
+@media (hover: hover) {
+  .marquee:hover .marquee-track { animation-play-state: paused; }
+}
 .brand-tile {
   width: 240px;
   height: 140px;
@@ -1031,12 +1039,18 @@ section { scroll-margin-top: 90px; }
   background: #f0d8a8;
   transition: width 0.5s cubic-bezier(.2,.7,.2,1);
 }
-.brand-tile:hover {
-  background: #fff;
-  border-color: #fff;
-  transform: translateY(-4px);
+@media (hover: hover) {
+  .brand-tile:hover {
+    background: #fff;
+    border-color: #fff;
+    transform: translateY(-4px);
+  }
+  .brand-tile:hover::before { width: 100%; }
+  .brand-tile:hover img {
+    filter: none;
+    transform: scale(1.04);
+  }
 }
-.brand-tile:hover::before { width: 100%; }
 .brand-tile img {
   max-width: 100%;
   max-height: 100%;
@@ -1044,10 +1058,7 @@ section { scroll-margin-top: 90px; }
   filter: brightness(0) invert(1) opacity(0.78);
   transition: filter 0.4s, transform 0.4s;
 }
-.brand-tile:hover img {
-  filter: none;
-  transform: scale(1.04);
-}
+
 
 .marcas-footer {
   margin-top: 48px;
@@ -1326,6 +1337,16 @@ section { scroll-margin-top: 90px; }
   .navbar a:not(.nav-flag)::after { display: none; }
 
   /* HERO */
+  .solo-mobile { display: block; }
+  .solo-desktop { display: none; }  
+
+  .hero p.hero-lede.solo-mobile {
+    animation: fadeUp 1s ease 0.4s both;
+  }
+  .hero p.hero-lede.solo-desktop {
+    animation: none;
+  }
+
   .hero-inner { padding: 0 24px; }
   .hero h1 { font-size: clamp(40px, 11vw, 64px); }
   .hero-eyebrow { font-size: 12px; letter-spacing: 0.2em; margin-bottom: 20px; }
@@ -1343,6 +1364,7 @@ section { scroll-margin-top: 90px; }
   .hero-scroll { display: none; }
 
   /* QUIENES SOMOS */
+  .solo-desktop { display: none; }
   .QuienesSomos-section { padding: 80px 0 60px; }
   .QuienesSomos-content { padding: 0 24px; }
   .QuienesSomos-collage { grid-auto-rows: 90px; gap: 8px; }
@@ -1370,8 +1392,7 @@ section { scroll-margin-top: 90px; }
   .NuestraExperiencia-seccion { padding: 80px 0 70px; }
   .sh { margin-bottom: 40px; }
   .sh-sub { padding: 0 24px; font-size: 14px; }
-  .carousel-item { width: 260px; height: 340px; }
-
+  .carousel-item { width: 220px; height: 290px; }  
   /* FEATURES GRID */
   .grid-section { padding: 70px 20px; }
   .grid-container { grid-template-columns: 1fr; }
